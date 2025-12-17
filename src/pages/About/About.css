@@ -1,0 +1,158 @@
+.about-container {
+    padding: 0 2vw;
+    box-sizing: border-box;
+  }
+  
+  .about-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 2vw;
+    gap: 4vw;
+    margin-bottom: 4vw;
+  }
+  
+  .about-hero-left {
+    width: 52vw;
+  }
+  
+  .about-hero-right {
+    width: 36vw;
+  }
+  
+  .about-hero-left h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 3.34vw;
+    font-weight: 400;
+    margin: 0 0 1.5vw 0;
+  }
+  
+  .about-hero-right p {
+    font-size: 1.25vw;
+    margin-top: 5vw;
+  }
+  
+  .about-image-wrap,
+  .about-image {
+    width: 100%;
+  }
+  
+  .about-image {
+    height: 35vw;
+    display: block;
+    border-radius: 1.5vw;
+    object-fit: cover;
+    
+  }
+
+  .about-content {
+    display: flex;
+    gap: 4vw;
+    margin-top: 5vw;
+    margin-bottom: 4vw;
+  }
+
+  .about-col-1,
+  .about-col-2,
+  .about-col-3 {
+    flex: 1;
+  }
+
+  
+
+  .about-section {
+    margin-bottom: 4vw;
+  }
+
+  .about-section-mission {
+    margin-top: 8vw;
+  }
+
+  .about-section-title {
+    font-size: 1.67vw;
+    font-weight: 400;
+    font-style: italic;
+    display: block;
+    margin: 0 0 1.5vw 0;
+  }
+
+  .about-section-text-left {
+    font-size: 1.67vw;
+    font-weight: 400;
+    max-width: 25vw;
+    display: block;
+    margin: 0 0 1.5vw 0;
+  }
+
+  .about-section-text {
+    font-size: 1.25vw;
+    font-weight: 400;
+    max-width: 22vw;
+    display: block;
+    margin: 0 0 1.5vw 0;
+  }
+
+  .about-content-image {
+    width: 100%;
+    border-radius: 1.5vw;
+    object-fit: cover;
+  }
+
+  .founder-section {
+    display: flex;
+    gap: 4vw;
+    margin-top: 5vw;
+    margin-bottom: 4vw;
+    align-items: flex-start;
+  }
+
+  .founder-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 35vw;
+  }
+
+  .founder-heading {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.67vw;
+    font-weight: 400;
+    font-style: italic;
+    margin: 0;
+  }
+
+  .founder-name-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: 0;
+  }
+
+  .founder-name {
+    font-family: 'Inter', sans-serif;
+    font-size: 6.67vw;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1;
+  }
+
+  .founder-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.25vw;
+    font-weight: 400;
+    margin: 2vw 0 0 0;
+    max-width: 40vw;
+  }
+
+  .founder-right {
+    flex: 1;
+  }
+
+  .founder-image {
+    width: 100%;
+    height: auto;
+    border-radius: 1.5vw;
+    object-fit: cover;
+  }
+  
