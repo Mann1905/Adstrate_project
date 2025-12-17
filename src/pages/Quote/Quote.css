@@ -1,0 +1,134 @@
+.container {
+  margin: 0 2vw;
+  padding: 4vw 0;
+}
+
+.wrapper {
+  display: flex;
+  gap: 4vw;
+}
+
+.left {
+  flex: 0.6;
+  max-width: 30vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+}
+
+.left h2 {
+  font-size: 1.67vw;
+  font-style: italic;
+  color: #333;
+  font-weight: 400;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.left p {
+  font-size: 1.67vw;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.left img {
+  width: 100%;
+  height: auto;
+  border-radius: 1.5vw;
+}
+
+.right {
+  flex: 1;
+  margin-top: 10vw;
+  margin-right: 2vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.steps {
+  display: flex;
+  gap: 8vw;
+  margin-bottom: 3vw;
+}
+
+.step {
+  width: 4vw;
+  height: 4vw;
+  border-radius: 50%;
+  border: 0.1vw solid #000;
+  background-color: transparent;
+  color: #000;
+  font-size: 1.2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.step.active {
+  background-color: #000;
+  color: #fff;
+}
+
+.step:hover {
+  opacity: 0.8;
+}
+
+.right form {
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  max-width: 40vw;
+}
+
+.right form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8vw;
+}
+
+.right form label {
+  font-size: 1.2vw;
+  color: #333;
+  font-weight: 400;
+}
+
+.right form input {
+  width: 100%;
+  padding: 1vw;
+  border: 0.1vw solid #000;
+  border-radius: 0.5vw;
+  font-size: 1.2vw;
+  font-family: inherit;
+  color: #333;
+}
+
+.right form input::placeholder {
+  color: #999;
+}
+
+.right form input:focus {
+  outline: none;
+}
+
+.right form button {
+  padding: 1.2vw 2vw;
+  border: 0.1vw solid #000;
+  max-width: 20vw;
+  border-radius: 2vw;
+  background-color: transparent;
+  color: #333;
+  font-size: 1.2vw;
+  font-family: inherit;
+  cursor: pointer;
+  font-weight: 400;
+  margin-top: 1vw;
+}
+
+.right form button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
