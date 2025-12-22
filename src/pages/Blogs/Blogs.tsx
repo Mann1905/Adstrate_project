@@ -1,9 +1,74 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import './Blogs.css';
+
+interface BlogPost {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+}
 
 const Blogs: React.FC = () => {
+  const blogPosts: BlogPost[] = [
+    {
+      id: 1,
+      title: 'Blogs Title',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      image: '/assets/images/01_HomePage/HeroSection_01.jpg'
+    },
+    {
+      id: 2,
+      title: 'Blogs Title',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      image: '/assets/images/01_HomePage/HeroSection_01.jpg'
+    },
+    {
+      id: 3,
+      title: 'Blogs Title',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      image: '/assets/images/01_HomePage/HeroSection_01.jpg'
+    },
+    {
+      id: 4,
+      title: 'Blogs Title',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      image: '/assets/images/01_HomePage/HeroSection_01.jpg'
+    },
+    {
+      id: 5,
+      title: 'Blogs Title',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      image: '/assets/images/01_HomePage/HeroSection_01.jpg'
+    },
+    {
+      id: 6,
+      title: 'Blogs Title',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      image: '/assets/images/01_HomePage/HeroSection_01.jpg'
+    },
+    {
+      id: 7,
+      title: 'Blogs Title',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      image: '/assets/images/01_HomePage/HeroSection_01.jpg'
+    },
+    {
+      id: 8,
+      title: 'Blogs Title',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      image: '/assets/images/01_HomePage/HeroSection_01.jpg'
+    },
+    {
+      id: 9,
+      title: 'Blogs Title',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      image: '/assets/images/01_HomePage/HeroSection_01.jpg'
+    }
+  ];
+
   return (
-    <div> {/* Main container */}
+    <div className="blogs-container">
       <Helmet>
         <title>Blogs - Interior Design Articles & Tips</title>
         <meta name="description" content="Explore our collection of interior design blogs, tips, and inspiration for your home renovation projects." />
@@ -13,93 +78,36 @@ const Blogs: React.FC = () => {
         <meta property="og:type" content="website" />
       </Helmet>
 
-      {/* Hero/Intro Section */}
-      <div> {/* Hero section container */}
-        <div> {/* Hero image container */}
-          <img alt="" /> {/* Hero image */}
-          <div> {/* Hero text overlay left side */}
-            <h1></h1> {/* Hero main title */}
-            <p></p> {/* Hero description */}
-          </div>
+      <section className="blogs-hero">
+        <img 
+          className="blogs-hero-image" 
+          src="/assets/images/01_HomePage/HeroSection_01.jpg" 
+          alt="Interior design inspiration"
+        />
+        <div className="blogs-hero-content">
+          <h1 className="blogs-hero-title">Interior Design Inspiration</h1>
+          <p className="blogs-hero-description">Discover the latest trends and tips for transforming your living spaces.</p>
         </div>
-      </div>
+      </section>
 
-      {/* Blogs Section */}
-      <div> {/* Blogs section container */}
-        <h2></h2> {/* Blogs section title */}
-        <div></div> {/* Separator line */}
-        <div> {/* Blog posts grid container */}
-          <div> {/* Blog post card 1 */}
-            <h3></h3> {/* Blog title */}
-            <p></p> {/* Blog description */}
-            <img alt="" /> {/* Blog image */}
-          </div>
-          <div> {/* Blog post card 2 */}
-            <h3></h3> {/* Blog title */}
-            <p></p> {/* Blog description */}
-            <img alt="" /> {/* Blog image */}
-          </div>
-          <div> {/* Blog post card 3 */}
-            <h3></h3> {/* Blog title */}
-            <p></p> {/* Blog description */}
-            <img alt="" /> {/* Blog image */}
-          </div>
+      <section>
+        <h2 className="blogs-section-title">Blogs</h2>
+        <div className="blogs-grid">
+          {blogPosts.map((post) => (
+            <article key={post.id} className="blog-card">
+              <h3 className="blog-card-title">{post.title}</h3>
+              <p className="blog-card-description">{post.description}</p>
+              <img 
+                className="blog-card-image" 
+                src={post.image} 
+                alt={post.title}
+              />
+            </article>
+          ))}
         </div>
-      </div>
-
-      <div></div> {/* Separator line */}
-
-      <div> {/* Blogs section container */}
-        <h2></h2> {/* Blogs section title */}
-        <div></div> {/* Separator line */}
-        <div> {/* Blog posts grid container */}
-          <div> {/* Blog post card 1 */}
-            <h3></h3> {/* Blog title */}
-            <p></p> {/* Blog description */}
-            <img alt="" /> {/* Blog image */}
-          </div>
-          <div> {/* Blog post card 2 */}
-            <h3></h3> {/* Blog title */}
-            <p></p> {/* Blog description */}
-            <img alt="" /> {/* Blog image */}
-          </div>
-          <div> {/* Blog post card 3 */}
-            <h3></h3> {/* Blog title */}
-            <p></p> {/* Blog description */}
-            <img alt="" /> {/* Blog image */}
-          </div>
-        </div>
-      </div>
-
-      <div></div> {/* Separator line */}
-
-      <div> {/* Blogs section container */}
-        <h2></h2> {/* Blogs section title */}
-        <div></div> {/* Separator line */}
-        <div> {/* Blog posts grid container */}
-          <div> {/* Blog post card 1 */}
-            <h3></h3> {/* Blog title */}
-            <p></p> {/* Blog description */}
-            <img alt="" /> {/* Blog image */}
-          </div>
-          <div> {/* Blog post card 2 */}
-            <h3></h3> {/* Blog title */}
-            <p></p> {/* Blog description */}
-            <img alt="" /> {/* Blog image */}
-          </div>
-          <div> {/* Blog post card 3 */}
-            <h3></h3> {/* Blog title */}
-            <p></p> {/* Blog description */}
-            <img alt="" /> {/* Blog image */}
-          </div>
-        </div>
-      </div>
-
-      <div></div> {/* Separator line */}
-
+      </section>
     </div>
   );
 };
 
 export default Blogs;
-

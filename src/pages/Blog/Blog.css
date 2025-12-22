@@ -1,0 +1,104 @@
+.container {
+  margin: 0 2vw;
+  padding: 2vw 0 4vw 0;
+}
+
+.hero {
+  width: 100%;
+  height: 35vw;
+  display: block;
+  border-radius: 1.5vw;
+  object-fit: cover;
+
+}
+
+.content {
+    margin-top: 5vw;
+  display: flex;
+  gap: 30vw;
+  align-items: flex-start;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  flex-shrink: 0;
+  width: 5vw;
+}
+
+.icons img {
+  width: 3vw;
+  height: 3vw;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.text {
+  flex: 1;
+}
+
+.text h1 {
+  font-size: 3.34vw;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  color: #333;
+  margin: 0 0 2vw 0;
+  line-height: 1.3;
+}
+
+.text p {
+  font-size: 1.25vw;
+  color: #333;
+  line-height: 1.6;
+  margin: 0 0 3vw 0;
+}
+
+.text h2 {
+  font-size: 3.34vw;
+  font-weight: 400;
+  color: #333;
+  margin: 0 0 1vw 0;
+}
+
+.text > h2 + p {
+  margin-bottom: 3vw;
+}
+
+.navigation {
+  display: flex;
+  gap: 4vw;
+  margin-top: 6vw;
+}
+
+.nav-item {
+  flex: 1;
+  padding-bottom: 2vw;
+  border-bottom: 0.2vw solid #02000092;
+}
+
+.nav-item h3 {
+  font-size: 1.67vw;
+  font-weight: 500;
+  color: #333;
+  margin: 0 0 1vw 0;
+}
+
+.nav-item p {
+  font-size: 1.25vw;
+  color: #333;
+  line-height: 1.6;
+  margin: 0 0 1.5vw 0;
+}
+
+.nav-item button {
+  font-size: 1.67vw;
+  font-style: italic;
+  color: #333;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-weight: 400;
+}
+

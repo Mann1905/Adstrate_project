@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import './home.css';
 
 const Home: React.FC = () => {
+  const [hoveredProject, setHoveredProject] = useState<number | null>(null);
+  const [hoveredProcess, setHoveredProcess] = useState<number | null>(null);
   return (
-    <div> {/* Main container */}
+    <div className="homepage-container">
       <Helmet>
         <title>Home - Interior Design & Home Solutions</title>
         <meta name="description" content="Transform your living spaces with our premium interior design services. Expert consultation, custom design, and quality materials for your dream home." />
@@ -15,190 +17,362 @@ const Home: React.FC = () => {
         <meta property="og:type" content="website" />
       </Helmet>
 
-      {/* Hero */}
-      <div> {/* Hero section container */}
-        <div> {/* Hero content wrapper */}
-          <p>Budget-Friendly Interior Design Experts in Mumbai</p> {/* Hero subtitle */}
-          <h4>Elevating Spaces with Expert Interior Design Solutions</h4> {/* Hero main title */}
-          <p>Ten View Interiors delivers creative, practical, and affordable interior design with 15+ years of expertise. From home interiors to turnkey execution, we provide smart, stylish, and personalized solutions for seamless, budget-friendly transformations.</p> {/* Hero description */}
-          <div> {/* Hero action buttons */}
+      {/* Section 1 - Hero */}
+      <section className="hero-section">
+        <div className="hero-left">
+          <p className="hero-subtitle">Budget-Friendly Interior Design Experts in Mumbai</p>
+          <h2 className="home-hero-title">
+            Elevating Spaces
+            with Expert Interior
+            Design Solutions
+          </h2>
+          <p className="hero-description">
+            Ten View Interiors delivers creative, practical, and affordable interior design with 15+ years of expertise. From home interiors to turnkey execution, we provide smart, stylish, and personalized solutions for seamless, budget-friendly transformations.
+          </p>
+          <div className="hero-buttons">
             <Link to="/contact" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <div>contact</div> {/* Contact button */}
+              <button className="btn-outlined">Consultation</button>
             </Link>
             <Link to="/quote" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <div>Get Quote</div> {/* Get Quote button */}
+              <button className="btn-filled">Get Quote</button>
             </Link>
           </div>
-          {/* Highlights */}
-          <div> {/* Highlights section container */}
-            <p>Highlights</p> {/* Highlights label */}
-            <div> {/* Highlights items container */}
-              <p>- Complete 1BHK Interiors Starting at Just 5–6 Lakhs</p>
-              <p> Turnkey Solutions: Design, Execution & Delivery</p>
-              <p>Expert Designers with 15+ Years of Experience</p>
-            </div>
+          <div className="hero-highlights">
+            <p>15+ yrs Experts</p>
+            <p>1BHK @ 5–6L</p>
+            <p>Full Turnkey</p>
           </div>
         </div>
-        <img src="/assets/images/01_HomePage/HeroSection_01.jpg" alt="Hero Section" /> {/* Hero image */}
-      </div>
+        <div className="hero-right">
+          <img src="/assets/images/01_HomePage/HeroSection_01.jpg" alt="Interior Design" />
+        </div>
+      </section>
 
-
-
-      {/* About Us */}
-      <div> {/* About Us section container */}
-        <div> {/* About Us left content */}
-          <h4> "Transforming space into a new face—beautiful design made truly affordable."</h4>
+      {/* Section 2 - Below Portion */}
+      <section className="about-section">
+        <div className="about-left">
+          <p className="about-tagline">Transforming space into a new face—beautiful design made truly affordable.</p>
           <Link to="/about" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <button>Explore More</button>
+            <button className="btn-outlined">Explore More</button>
           </Link>
-
         </div>
-        <div>
-          <p>About Us</p>
-          <p>Ten View Interiors is a Mumbai-based studio dedicated to creating stylish and cost-effective home interior design solutions. With a strong belief in “maximum design with minimum budget,” we offer residential and commercial interior services, including planning, renovation, furniture design, painting, electrical work, and project management. Our experienced interior designers curate every element to match your lifestyle, taste, and budget. Whether it’s a compact apartment or a spacious home, we deliver practical layouts, smart material choices, and aesthetic concepts that elevate your everyday living.</p> {/* About Us right description */}
+        <div className="about-right">
+          <p className="about-heading">About Us</p>
+          <p className="about-description">
+            Ten View Interiors is a Mumbai-based studio dedicated to creating stylish and cost-effective home interior design solutions. With a strong belief in "maximum design with minimum budget," we offer residential and commercial interior services, including planning, renovation, furniture design, painting, electrical work, and project management. Our experienced interior designers curate every element to match your lifestyle, taste, and budget. Whether it's a compact apartment or a spacious home, we deliver practical layouts, smart material choices, and aesthetic concepts that elevate your everyday living.
+          </p>
         </div>
-      </div>
+      </section>
 
       {/* Offerings */}
-      <div> {/* Offerings section container */}
-        <h2>Our offerings</h2> {/* Offerings title */}
-        <div> {/* Offerings grid container */}
-          <div> {/* Offering card 1 - Living Space */}
-            <img src="/assets/images/01_HomePage/OurOfferingSection_01.jpg" alt="Custom Home Interior Solutions" /> {/* Offering image */}
-            <h3>Custom Home Interior Solutions</h3> {/* Offering title */}
+      <section className="offerings-section">
+        <h2 className="offerings-title">Our Offerings</h2>
+        <div className="offerings-cards">
+          <div className="offering-card">
+            <img src="/assets/images/01_HomePage/OurOfferingSection_01.jpg" alt="Living Space" />
+            <h3 className="offering-card-text">Living Space</h3>
           </div>
-          <div> {/* Offering card 2 - Modular Kitchen */}
-            <img src="/assets/images/01_HomePage/OurOfferingSection_02.jpg" alt="Turnkey Design & Build Services" /> {/* Offering image */}
-            <h3>Turnkey Design & Build Services</h3> {/* Offering title */}
+          <div className="offering-card">
+            <img src="/assets/images/01_HomePage/OurOfferingSection_02.jpg" alt="Modular Kitchen" />
+            <h3 className="offering-card-text">Modular Kitchen</h3>
           </div>
-          <div> {/* Offering card 3 - Bedrooms */}
-            <img src="/assets/images/01_HomePage/OurOfferingSection_03.jpg" alt="Online Consultation & Virtual Design Packages" /> {/* Offering image */}
-            <h3> Online Consultation & Virtual Design Packages</h3> {/* Offering title */}
+          <div className="offering-card">
+            <img src="/assets/images/01_HomePage/OurOfferingSection_03.jpg" alt="Bedrooms" />
+            <h3 className="offering-card-text">Bedrooms</h3>
           </div>
         </div>
-        <div>
-          <button>
-          </button>
-        </div> {/* View more button */}
-      </div>
+        <div className="offerings-button-container">
+          <Link to="/services" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <button className="offerings-view-all-btn">View more</button>
+          </Link>
+        </div>
+      </section>
 
       {/* Projects */}
-      <div> {/* Projects section container */}
-        <h2> Projects </h2> {/* Projects title */}
-        <div> {/* Projects list container */}
-          <div> {/* Project item 1 */}
-            <h3>Dahisar 2BHK Modern Home</h3> {/* Project title */}
-            <div></div> {/* Project arrow icon */}
-            <p>Mumbai/Dahisar</p> {/* Project location */}
-
-          </div>
-          <div> {/* Project item 2 */}
-            <h3>Andheri Compact 1BHK Transformation</h3> {/* Project title */}
-            <div></div> {/* Project arrow icon */}
-            <p>Mumbai/Dahisar</p> {/* Project location */}
-          </div>
-          <div> {/* Project item 3 */}
-            <h3>Thane Contemporary Family Apartment</h3> {/* Project title */}
-            <div></div> {/* Project arrow icon */}
-            <p>Mumbai/Dahisar</p> {/* Project location */}
-          </div>
+      <section className="projects-section">
+        <div className="projects-list-container">
+          <Link to="/project" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <div 
+              className="project-item"
+              onMouseEnter={() => setHoveredProject(0)}
+              onMouseLeave={() => setHoveredProject(null)}
+            >
+              <div className="project-content">
+                <div className="project-left">
+                  <h3 className="project-title">Home Interior Design</h3>
+                  <p className="project-location">Mumbai | Malad</p>
+                </div>
+                <svg className="project-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+            </div>
+          </Link>
+          <Link to="/project3" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <div 
+              className="project-item"
+              onMouseEnter={() => setHoveredProject(1)}
+              onMouseLeave={() => setHoveredProject(null)}
+            >
+              <div className="project-content">
+                <div className="project-left">
+                  <h3 className="project-title">Interior Design Makeover</h3>
+                  <p className="project-location">Mumbai | Dahisar</p>
+                </div>
+                <svg className="project-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+            </div>
+          </Link>
+          <Link to="/project2" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <div 
+              className="project-item"
+              onMouseEnter={() => setHoveredProject(2)}
+              onMouseLeave={() => setHoveredProject(null)}
+            >
+              <div className="project-content">
+                <div className="project-left">
+                  <h3 className="project-title">Interior Design Project</h3>
+                  <p className="project-location">Mumbai | Bhayandar</p>
+                </div>
+                <svg className="project-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+            </div>
+          </Link>
+          <Link to="/project4" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <div 
+              className="project-item project-item-last"
+              onMouseEnter={() => setHoveredProject(3)}
+              onMouseLeave={() => setHoveredProject(null)}
+            >
+              <div className="project-content">
+                <div className="project-left">
+                  <h3 className="project-title">Raheja Complex Hall Interior Design</h3>
+                  <p className="project-location">Mumbai | Goregaon East</p>
+                </div>
+                <svg className="project-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+            </div>
+          </Link>
         </div>
-        <img src="/assets/images/01_HomePage/HeroSection_01.jpg" alt="Projects" /> {/* Projects featured image */}
-      </div>
+        <div className="projects-image-container">
+          {hoveredProject !== null ? (
+            <img 
+              src={
+                hoveredProject === 0 
+                  ? '/assets/images/05_OurProjectDetailsPage/IMG-20250101-WA0014.jpg' // Home Interior Design - Project1
+                  : hoveredProject === 1
+                  ? '/assets/images/05_OurProjectDetailsPage/project3/IMG-20250101-WA0005.jpg' // Interior Design Makeover - Project3
+                  : hoveredProject === 2
+                  ? '/assets/images/05_OurProjectDetailsPage/project2/IMG-20250318-WA0007.jpg' // Interior Design Project - Project2
+                  : '/assets/images/05_OurProjectDetailsPage/project4/IMG-20250717-WA0000.jpg' // Raheja Complex Hall - Project4
+              }
+              alt={
+                hoveredProject === 0 
+                  ? 'Home Interior Design'
+                  : hoveredProject === 1
+                  ? 'Interior Design Makeover'
+                  : hoveredProject === 2
+                  ? 'Interior Design Project'
+                  : 'Raheja Complex Hall Interior Design'
+              }
+              className="project-featured-image"
+              onError={(e) => {
+                // Fallback to default image if specific project image doesn't exist
+                (e.target as HTMLImageElement).src = '/assets/images/01_HomePage/HeroSection_01.jpg';
+              }}
+            />
+          ) : null}
+        </div>
+      </section>
 
       {/* Why Choose Us */}
-      <div> {/* Why Choose Us section container */}
-        <h2>Why Choose Ten View Interiors for Your Interior Design Needs?</h2> {/* Why Choose Us title */}
-        <p>Choosing Ten View Interiors means choosing reliability, creativity, and affordability. We focus on practical house interior design that enhances day-to-day comfort while reflecting your personality. Our team manages everything—from planning to final delivery—ensuring a seamless and stress-free experience. With transparent pricing, quality materials, and customized concepts, we create homes you love living in. Whether you need budget interiors, modern themes, or personalized bedroom interior design, we bring your vision to life with precision and care.</p> {/* Why Choose Us content */}
-      </div>
+      <section className="why-choose-section">
+        <div className="why-choose-image-container">
+          <img 
+            src="" 
+            alt="now" 
+            className="why-choose-image"
+          />
+        </div>
+        <h2 className="why-choose-title">Why Choose Ten View Interiors for Your Interior Design Needs?</h2>
+        <p className="why-choose-description">Ten View Interiors delivers reliable, affordable, personalized interior design with seamless execution, quality materials, and creative concepts tailored to your lifestyle and comfort.</p>
+      </section>
 
       {/* The Process */}
-      <div> {/* The Process section container */}
-        <h2>The Process</h2> {/* The Process title */}
-        <div> {/* Process steps container */}
-          <div> {/* Process step 1 - Consultation */}
-            <h3>01</h3> {/* Process number */}
-            <h4>Consultation</h4> {/* Process name */}
-            <Link to="/process" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <p>Details</p> {/* Process details link */}
-            </Link>
+      <section className="process-section">
+        <h2 className="process-section-title">Processes steps heading only as follows.</h2>
+        <div className="process-list-container">
+          <div 
+            className="process-item"
+            onMouseEnter={() => setHoveredProcess(0)}
+            onMouseLeave={() => setHoveredProcess(null)}
+          >
+            <div className="process-content">
+              <div className="process-left">
+                <h3 className="process-number">01</h3>
+                <h4 className="process-title">Consultation</h4>
+              </div>
+              <Link to="/process" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <p className="process-details">Details</p>
+              </Link>
+            </div>
           </div>
-          <div> {/* Process step 2 - Design */}
-            <h3> 02</h3> {/* Process number */}
-            <h4>Concept Development</h4> {/* Process name */}
-            <Link to="/process" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <p>Details</p> {/* Process details link */}
-            </Link>
+          <div 
+            className="process-item"
+            onMouseEnter={() => setHoveredProcess(1)}
+            onMouseLeave={() => setHoveredProcess(null)}
+          >
+            <div className="process-content">
+              <div className="process-left">
+                <h3 className="process-number">02</h3>
+                <h4 className="process-title">Concept Development</h4>
+              </div>
+              <Link to="/process" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <p className="process-details">Details</p>
+              </Link>
+            </div>
           </div>
-          <div> {/* Process step 3 - Materials */}
-            <h3>03</h3> {/* Process number */}
-            <h4>Design Proposal</h4> {/* Process name */}
-            <Link to="/process" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <p>Details</p> {/* Process details link */}
-            </Link>
+          <div 
+            className="process-item"
+            onMouseEnter={() => setHoveredProcess(2)}
+            onMouseLeave={() => setHoveredProcess(null)}
+          >
+            <div className="process-content">
+              <div className="process-left">
+                <h3 className="process-number">03</h3>
+                <h4 className="process-title">Design Proposal</h4>
+              </div>
+              <Link to="/process" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <p className="process-details">Details</p>
+              </Link>
+            </div>
           </div>
-          <div> {/* Process step 4 - Delivery */}
-            <h3>04</h3> {/* Process number */}
-            <h4>Material Selection</h4> {/* Process name */}
-            <Link to="/process" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <p>Details</p> {/* Process details link */}
-            </Link>
+          <div 
+            className="process-item"
+            onMouseEnter={() => setHoveredProcess(3)}
+            onMouseLeave={() => setHoveredProcess(null)}
+          >
+            <div className="process-content">
+              <div className="process-left">
+                <h3 className="process-number">04</h3>
+                <h4 className="process-title">Material Selection</h4>
+              </div>
+              <Link to="/process" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <p className="process-details">Details</p>
+              </Link>
+            </div>
           </div>
-          <div> {/* Process step 5 - Live */}
-            <h3>05</h3> {/* Process number */}
-            <h4>Execution</h4> {/* Process name */}
-            <Link to="/process" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <p>Details</p> {/* Process details link */}
-            </Link>
+          <div 
+            className="process-item"
+            onMouseEnter={() => setHoveredProcess(4)}
+            onMouseLeave={() => setHoveredProcess(null)}
+          >
+            <div className="process-content">
+              <div className="process-left">
+                <h3 className="process-number">05</h3>
+                <h4 className="process-title">Execution</h4>
+              </div>
+              <Link to="/process" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <p className="process-details">Details</p>
+              </Link>
+            </div>
           </div>
-          <div> {/* Process step 5 - Live */}
-            <h3>06</h3> {/* Process number */}
-            <h4>Delivery</h4> {/* Process name */}
-            <Link to="/process" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <p>Details</p> {/* Process details link */}
-            </Link>
-          </div>
-        </div>
-        <div> {/* Process images container */}
-          <img src="/assets/images/01_HomePage/TheProcessSection_01.jpg" alt="Consultation" /> {/* Process step 1 image */}
-          <img src="/assets/images/01_HomePage/TheProcessSection_02.jpg" alt="Concept Development" /> {/* Process step 2 image */}
-          <img src="/assets/images/01_HomePage/TheProcessSection_03.jpg" alt="Design Proposal" /> {/* Process step 3 image */}
-          <img src="/assets/images/01_HomePage/TheProcessSection_04.jpg" alt="Material Selection" /> {/* Process step 4 image */}
-          <img src="/assets/images/01_HomePage/TheProcessSection_05.jpg" alt="Execution" /> {/* Process step 5 image */}
-          <img src="/assets/images/01_HomePage/TheProcessSection_06.jpg" alt="Delivery" /> {/* Process step 6 image */}
-        </div>
-      </div>
-
-      {/* Contact */}
-      <div> {/* Contact section container */}
-        <div> {/* Contact content left side */}
-          <h2>Let’s Design Your Dream Home</h2> {/* Contact title */}
-          <p>Reach out to Ten View Interiors to begin your journey toward a beautifully designed space. Whether you need full home interiors, renovation support, or expert guidance from interior designers, our team is ready to assist with budget-friendly and creative solutions.</p> {/* Contact description */}
-          <div> {/* Contact info container */}
-            <p>phone no: <a href="tel:+911234123123" style={{ textDecoration: 'none', color: 'inherit' }}>+91 1234 123 123</a></p> {/* Phone number */}
-            <p>email: <a href="mailto:contact@tenviewinteriors.in" style={{ textDecoration: 'none', color: 'inherit' }}>contact@tenviewinteriors.in</a></p> {/* Email address */}
-            <div> {/* Social media icons */}
-              <div></div> {/* Social icon 1 */}
-              <div></div> {/* Social icon 2 */}
+          <div 
+            className="process-item process-item-last"
+            onMouseEnter={() => setHoveredProcess(5)}
+            onMouseLeave={() => setHoveredProcess(null)}
+          >
+            <div className="process-content">
+              <div className="process-left">
+                <h3 className="process-number">06</h3>
+                <h4 className="process-title">Delivery</h4>
+              </div>
+              <Link to="/process" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <p className="process-details">Details</p>
+              </Link>
             </div>
           </div>
         </div>
-        <div> {/* Contact form container */}
-          <div> {/* Form field 1 - Full Name */}
-            <div> Full Name </div> {/* Label */}
-            <div> <input type="text" placeholder="Full Name" /> </div> {/* Input */}
-          </div>
-          <div> {/* Form field 2 - Phone No */}
-            <div> Phone No </div> {/* Label */}
-            <div> <input type="tel" placeholder="Phone No" /> </div> {/* Input */}
-          </div>
-          <div> {/* Form field 3 - Message */}
-            <div> Message </div> {/* Label */}
-            <div> <textarea placeholder="Message" /> </div> {/* Textarea */}
-          </div>
-          <div> <button> Submit </button> </div> {/* Submit button */}
+        <div className="process-image-container">
+          {hoveredProcess !== null ? (
+            <img 
+              src={
+                hoveredProcess === 0 
+                  ? '/assets/images/01_HomePage/TheProcessSection_01.jpg' // Consultation
+                  : hoveredProcess === 1
+                  ? '/assets/images/01_HomePage/TheProcessSection_02.jpg' // Concept Development
+                  : hoveredProcess === 2
+                  ? '/assets/images/01_HomePage/TheProcessSection_03.jpg' // Design Proposal
+                  : hoveredProcess === 3
+                  ? '/assets/images/01_HomePage/TheProcessSection_04.jpg' // Material Selection
+                  : hoveredProcess === 4
+                  ? '/assets/images/01_HomePage/TheProcessSection_05.jpg' // Execution
+                  : '/assets/images/01_HomePage/TheProcessSection_06.jpg' // Delivery
+              }
+              alt={
+                hoveredProcess === 0 
+                  ? 'Consultation'
+                  : hoveredProcess === 1
+                  ? 'Concept Development'
+                  : hoveredProcess === 2
+                  ? 'Design Proposal'
+                  : hoveredProcess === 3
+                  ? 'Material Selection'
+                  : hoveredProcess === 4
+                  ? 'Execution'
+                  : 'Delivery'
+              }
+              className="process-featured-image"
+              onError={(e) => {
+                (e.target as HTMLImageElement).src = '/assets/images/01_HomePage/HeroSection_01.jpg';
+              }}
+            />
+          ) : null}
         </div>
-      </div>
+      </section>
+
+      {/* Contact */}
+      <section className="contact-section contact-section-last">
+        <div className="contact-left">
+          <h2 className="contact-title">Let's Design Your Dream Home</h2>
+          <p className="contact-description">Reach out to Ten View Interiors to begin your journey toward a beautifully designed space. Whether you need full home interiors, renovation support, or expert guidance from interior designers, our team is ready to assist with budget-friendly and creative solutions.</p>
+          <div className="contact-info">
+            <p className="contact-phone">Phone No: <a href="tel:+911234123123" style={{ textDecoration: 'none', color: 'inherit' }}>+91 1234 123 123</a></p>
+            <p className="contact-email">Email: <a href="mailto:contact@tenviewinteriors.in" style={{ textDecoration: 'none', color: 'inherit' }}>contact@tenviewinteriors.in</a></p>
+            <div className="contact-social-icons">
+              <div className="contact-social-icon" title="Instagram">
+                <img src="/assets/images/01_HomePage/Instagram.png" alt="Instagram" />
+              </div>
+              <div className="contact-social-icon" title="LinkedIn">
+                <img src="/assets/images/01_HomePage/LinkedIn.png" alt="LinkedIn" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="contact-right">
+          <div className="contact-form">
+            <div className="home-form">
+              <label className="contact-form-label">Full Name</label>
+              <input type="text" placeholder="Full Name" />
+            </div>
+            <div className="home-form">
+              <label className="contact-form-label">Phone No</label>
+              <input type="tel" placeholder="Phone No" />
+            </div>
+            <div className="home-form">
+              <label className="contact-form-label">Message</label>
+              <textarea placeholder="Message" />
+            </div>
+            <button className="contact-submit-btn">Submit</button>
+          </div>
+        </div>
+      </section>
 
     </div>
   );

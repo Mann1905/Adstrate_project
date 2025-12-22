@@ -1,9 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import './Blog.css';
 
 const Blog: React.FC = () => {
   return (
-    <div> {/* Main container */}
+    <div className="container">
       <Helmet>
         <title>Blog Post - Interior Design Insights</title>
         <meta name="description" content="Read our latest interior design blog post with expert insights, tips, and inspiration for your home." />
@@ -13,68 +14,43 @@ const Blog: React.FC = () => {
         <meta property="og:type" content="article" />
       </Helmet>
 
-      {/* Hero Image Section */}
-      <div> {/* Hero image section container */}
-        <img alt="" /> {/* Hero image */}
+      <img className="hero" src="/assets/images/01_HomePage/HeroSection_01.jpg" alt="Blog hero" />
 
-      </div>
-
-      {/* Main Content Section */}
-      <div>
-        <div> {/* Navigation dots left side*/}
-          <div></div> {/* Dot 1 */}
-          <div></div> {/* Dot 2 */}
+      <div className="content">
+        <div className="icons">
+          <img src="/assets/images/01_HomePage/Instagram.png" alt="Instagram" />
+          <img src="/assets/images/01_HomePage/LinkedIn.png" alt="LinkedIn" />
         </div>
 
-        <div> {/* Navigation dots right side*/}
-          <div> {/* Main content container */}
+        <div className="text">
+          <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris feugiat rhoncus pretium. Praesent nec lorem tortor. Nulla ut imperdiet dui.</p>
 
-            <h1></h1> {/* Main title */}
-            <p></p> {/* Introductory paragraph */}
+          <h2>Lorem ipsum dolor</h2>
+          <p>Integer sit amet placerat nisi. Ut vel libero sed metus cursus bibendum. Nunc ac convallis nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque suscipit velit molestie scelerisque ultricies. Mauris eget consequat ex, rutrum accumsan nibh. Vivamus sapien est, facilisis sollicitudin lacus vel, dignissim porta ipsum. Cras lorem nisi, sollicitudin vitae tincidunt non, sagittis nec dolor. Nulla sollicitudin felis sed sodales viverra. Integer condimentum pretium elit, at suscipit urna venenatis dapibus. Vivamus at leo tempus, ornare tellus a, ornare mauris.</p>
+          <p>Integer sit amet placerat nisi. Ut vel libero sed metus cursus bibendum. Nunc ac convallis nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque suscipit velit molestie scelerisque ultricies. Mauris eget consequat ex, rutrum accumsan nibh. Vivamus sapien est, facilisis sollicitudin lacus vel, dignissim porta ipsum. Cras lorem nisi, sollicitudin vitae tincidunt non, sagittis nec dolor. Nulla sollicitudin felis sed sodales viverra. Integer condimentum pretium elit, at suscipit urna venenatis dapibus. Vivamus at leo tempus, ornare tellus a, ornare mauris.</p>
+          <h2>Lorem ipsum dolor</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris feugiat rhoncus pretium. Praesent nec lorem tortor. Nulla ut imperdiet dui.</p>        
 
-            {/* Content Section 1 */}
-            <div> {/* Content section container */}
-              <h2></h2> {/* Section title */}
-              <p></p> {/* Section body text */}
-            </div>
 
-            {/* Content Section 2 */}
-            <div> {/* Content section container */}
-              <h2></h2> {/* Section title */}
-              <p></p> {/* Section body text */}
-            </div>
-
-            {/* Content Section 3 */}
-            <div> {/* Content section container */}
-              <h2></h2> {/* Section title */}
-              <p></p> {/* Section body text */}
-            </div>
-          </div>
         </div>
       </div>
 
-      {/* Footer Navigation */}
-      <div> {/* Footer navigation container */}
-        <div> {/* Previous post */}
-          <h3></h3> {/* Post title */}
-          <p></p> {/* Post description */}
-          <div></div> {/* Previous link */}
+      <div className="navigation">
+        <div className="nav-item">
+          <h3>Blogs Title</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <button>Previous</button>
         </div>
 
-        <div></div>
-
-        <div> {/* Next post */}
-          <h3></h3> {/* Post title */}
-          <p></p> {/* Post description */}
-          <div></div> {/* Next link */}
+        <div className="nav-item">
+          <h3>Blogs Title</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <button>Next</button>
         </div>
-
-
-
       </div>
     </div>
   );
 };
 
 export default Blog;
-

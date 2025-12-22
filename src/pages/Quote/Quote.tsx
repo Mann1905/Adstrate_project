@@ -5,6 +5,69 @@ import './Quote.css';
 const Quote: React.FC = () => {
   const [activeStep, setActiveStep] = useState(1);
 
+  const handleNext = () => {
+    if (activeStep < 4) {
+      setActiveStep(activeStep + 1);
+    }
+  };
+
+  const renderFormContent = () => {
+    switch (activeStep) {
+      case 1:
+        return (
+          <>
+            <div>
+              <label>Full Name</label>
+              <input type="text" placeholder="Full Name" />
+            </div>
+            
+            <div>
+              <label>Phone No</label>
+              <input type="tel" placeholder="Phone No" />
+            </div>
+          </>
+        );
+      
+      case 2:
+        return (
+          <>
+            <div>
+              <label>Service Required</label>
+              <input type="text" placeholder="1BHK" />
+            </div>
+            
+            <div>
+              <label>Your Budget</label>
+              <input type="text" placeholder="Phone No" />
+            </div>
+          </>
+        );
+      
+      case 3:
+        return (
+          <>
+            <div>
+              <label>Your Location</label>
+              <input type="text" placeholder="Full Name" />
+            </div>
+          </>
+        );
+      
+      case 4:
+        return (
+          <>
+            <label>Any Customization Required</label>
+            <div>
+              <textarea placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris feugiat rhoncus pretium. Praesent nec lorem tortor. Nulla ut imperdiet dui."></textarea>
+            </div>
+          </>
+        );
+      
+      default:
+        return null;
+    }
+  };
+
   return (
     <div className="container">
       <Helmet>
@@ -37,17 +100,11 @@ const Quote: React.FC = () => {
           </div>
           
           <form>
-            <div>
-              <label>Full Name</label>
-              <input type="text" placeholder="Full Name" />
-            </div>
+            {renderFormContent()}
             
-            <div>
-              <label>Phone No</label>
-              <input type="tel" placeholder="Phone No" />
-            </div>
-            
-            <button type="button">Next</button>
+            <button type="button" onClick={handleNext}>
+              {activeStep === 4 ? 'Submit' : 'Next'}
+            </button>
           </form>
         </div>
       </div>

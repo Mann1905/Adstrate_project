@@ -9,6 +9,7 @@ import Contact from './pages/Contact/Contact';
 import Service from './pages/Service/Service';
 import Process from './pages/Process/Process';
 import Blogs from './pages/Blogs/Blogs';
+import Blog from './pages/Blog/Blog';
 import Quote from './pages/Quote/Quote';
 import Project from './pages/Project/Project';
 import Project2 from './pages/Project/Project2';
@@ -38,6 +39,7 @@ const App: React.FC = () => {
               <Route path="/services" element={<Service />} />
               <Route path="/process" element={<Process />} />
               <Route path="/blogs" element={<Blogs />} />
+              <Route path="/blog" element={<Blog />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/quote" element={<Quote />} />
               <Route path="/projects" element={<Projects />} />

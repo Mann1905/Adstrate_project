@@ -5,7 +5,7 @@
 
 .wrapper {
   display: flex;
-  gap: 4vw;
+  gap: 8vw;
 }
 
 .left {
@@ -20,7 +20,7 @@
   font-size: 1.67vw;
   font-style: italic;
   color: #333;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.3;
   margin: 0;
 }
@@ -40,8 +40,7 @@
 
 .right {
   flex: 1;
-  margin-top: 10vw;
-  margin-right: 2vw;
+  margin-top: 5vw;
   display: flex;
   flex-direction: column;
 }
@@ -79,7 +78,7 @@
 .right form {
   display: flex;
   flex-direction: column;
-  gap: 2vw;
+  gap: 1vw;
   max-width: 40vw;
 }
 
@@ -91,6 +90,7 @@
 
 .right form label {
   font-size: 1.2vw;
+  font-family: 'Red Hat Display', sans-serif;
   color: #333;
   font-weight: 400;
 }
@@ -111,6 +111,36 @@
 
 .right form input:focus {
   outline: none;
+  border-color: #0066ff;
+}
+
+.right form h3 {
+  font-size: 1.2vw;
+  font-family: 'Red Hat Display', sans-serif;
+  color: #333;
+  font-weight: 400;
+  margin: 0 0 1vw 0;
+}
+
+.right form textarea {
+  width: 100%;
+  padding: 1vw;
+  border: 0.1vw solid #000;
+  border-radius: 0.5vw;
+  font-size: 1.2vw;
+  font-family: inherit;
+  color: #333;
+  min-height: 8vw;
+  resize: vertical;
+}
+
+.right form textarea::placeholder {
+  color: #999;
+}
+
+.right form textarea:focus {
+  outline: none;
+  border-color: #0066ff;
 }
 
 .right form button {
