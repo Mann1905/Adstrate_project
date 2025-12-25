@@ -49,7 +49,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Section 2 - Below Portion */}
-      <section className="about-section">
+      <section className="about-section-home">
         <div className="about-left">
           <p className="about-tagline">Transforming space into a new face—beautiful design made truly affordable.</p>
           <Link to="/about" style={{ textDecoration: 'none', color: 'inherit' }}>
@@ -99,7 +99,7 @@ const Home: React.FC = () => {
             >
               <div className="project-content">
                 <div className="project-left">
-                  <h3 className="project-title">Home Interior Design</h3>
+                  <h3 className="project-title-home">Home Interior Design</h3>
                   <p className="project-location">Mumbai | Malad</p>
                 </div>
                 <svg className="project-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -116,7 +116,7 @@ const Home: React.FC = () => {
             >
               <div className="project-content">
                 <div className="project-left">
-                  <h3 className="project-title">Interior Design Makeover</h3>
+                  <h3 className="project-title-home">Interior Design Makeover</h3>
                   <p className="project-location">Mumbai | Dahisar</p>
                 </div>
                 <svg className="project-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -133,7 +133,7 @@ const Home: React.FC = () => {
             >
               <div className="project-content">
                 <div className="project-left">
-                  <h3 className="project-title">Interior Design Project</h3>
+                  <h3 className="project-title-home">Interior Design Project</h3>
                   <p className="project-location">Mumbai | Bhayandar</p>
                 </div>
                 <svg className="project-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -150,7 +150,7 @@ const Home: React.FC = () => {
             >
               <div className="project-content">
                 <div className="project-left">
-                  <h3 className="project-title">Raheja Complex Hall Interior Design</h3>
+                  <h3 className="project-title-home">Raheja Complex Hall Interior Design</h3>
                   <p className="project-location">Mumbai | Goregaon East</p>
                 </div>
                 <svg className="project-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -338,7 +338,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Contact */}
-      <section className="contact-section contact-section-last">
+      <section className="contact-section">
         <div className="contact-left">
           <h2 className="contact-title">Let's Design Your Dream Home</h2>
           <p className="contact-description">Reach out to Ten View Interiors to begin your journey toward a beautifully designed space. Whether you need full home interiors, renovation support, or expert guidance from interior designers, our team is ready to assist with budget-friendly and creative solutions.</p>

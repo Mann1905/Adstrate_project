@@ -8,22 +8,23 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #212529;
+  background-color: #FBFBFB;
 }
 
 /* Section 1 - Hero Section */
 .hero-section {
   display: flex;
   gap: 3.33vw;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 5vw;
-  padding-top: 2.5vw;
+  padding-top: 1.20vw;
 }
 
 .hero-left {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 2.80vw;
+  gap: 1.1vw;
 }
 
 .hero-subtitle {
@@ -35,8 +36,8 @@
 
 .homepage-container .home-hero-title {
   font-size: 5vw;
-  font-weight: 500;
-  line-height: 1.2;
+  font-weight: 400;
+  line-height: 1.15;
   margin: 0;
   max-width: 46vw;
   color: #212529;
@@ -45,7 +46,7 @@
 
 .hero-description {
   font-size: 1.25vw;
-  line-height: 1.7;
+  line-height: 1.4;
   color: #495057;
   margin: 0;
   max-width: 90%;
@@ -62,41 +63,31 @@
   background: transparent;
   max-width: 16vw;
   color: #212529;
-  padding: 1.50vw 2.50vw;
+  padding: 1.20vw 1.50vw;
   border-radius: 2.56vw;
-  font-size: 1.67vw;
+  font-size: 1.25vw;
   font-weight: 400;
   cursor: pointer;
   transition: all 0.3s ease;
   font-family: 'Inter', sans-serif;
 }
 
-.btn-outlined:hover {
-  background: #212529;
-  color: #fff;
-  transform: translateY(-0.104vw);
-  box-shadow: 0 0.208vw 0.625vw rgba(0, 0, 0, 0.15);
-}
+
 
 .btn-filled {
   border: 0.104vw solid #212529;
   background: #212529;
-  color: #fff;
-  padding: 1.50vw 2.50vw;
+  color: #FBFBFB;
+  padding: 1.20vw 1.50vw;
   border-radius: 2.56vw;
-  font-size: 1.67vw;
+  font-size: 1.25vw;
   font-weight: 400;
   cursor: pointer;
   transition: all 0.3s ease;
   font-family: 'Inter', sans-serif;
 }
 
-.btn-filled:hover {
-  background: #000;
-  border-color: #000;
-  transform: translateY(-0.104vw);
-  box-shadow: 0 0.208vw 0.625vw rgba(0, 0, 0, 0.25);
-}
+
 
 .hero-highlights {
   display: flex;
@@ -121,20 +112,19 @@
 .hero-right img {
   width: 100%;
   max-width: 100%;
-  height: 47vw;
+  height: 37vw;
   border-radius: 1.04vw;
   object-fit: cover;
   display: block;
 }
 
 /* Section 2 - About Section */
-.about-section {
+.about-section-home {
   display: flex;
   gap: 3.33vw;
   align-items: flex-start;
   margin-bottom: 5vw;
   padding-top: 2.5vw;
-
 }
 
 .about-left {
@@ -177,108 +167,10 @@
   margin: 0;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .hero-section,
-  .about-section {
-    gap: 2.5vw;
-  }
-
-  .homepage-container .home-hero-title {
-    font-size: 2.08vw;
-    max-width: 100%;
-  }
-
-  .about-tagline {
-    font-size: 1.25vw;
-  }
-}
-
-@media (max-width: 768px) {
-  .homepage-container {
-    margin-left: 4vw;
-    margin-right: 4vw;
-  }
-
-  .hero-section,
-  .about-section {
-    flex-direction: column;
-    gap: 2.08vw;
-    margin-bottom: 3.33vw;
-  }
-
-  .hero-left {
-    order: 1;
-  }
-
-  .hero-right {
-    order: 2;
-  }
-
-  .homepage-container .home-hero-title {
-    font-size: 1.67vw;
-    max-width: 100%;
-  }
-
-  .hero-description {
-    max-width: 100%;
-  }
-
-  .hero-buttons {
-    flex-wrap: wrap;
-  }
-
-  .hero-highlights {
-    flex-wrap: wrap;
-    gap: 1.25vw;
-  }
-
-  .about-tagline {
-    font-size: 1.04vw;
-  }
-
-  .about-heading {
-    font-size: 1.25vw;
-  }
-}
-
-@media (max-width: 480px) {
-  .homepage-container {
-    margin-left: 5vw;
-    margin-right: 5vw;
-  }
-
-  .homepage-container .home-hero-title {
-    font-size: 1.46vw;
-    max-width: 100%;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .btn-outlined,
-  .btn-filled {
-    width: 100%;
-    text-align: center;
-  }
-
-  .hero-highlights {
-    flex-direction: column;
-    gap: 0.625vw;
-  }
-
-  .about-tagline {
-    font-size: 0.92vw;
-  }
-}
-
 /* Offerings Section */
 .offerings-section {
   margin-bottom: 5vw;
   padding-top: 2.5vw;
-  
 }
 
 .offerings-title {
@@ -319,7 +211,7 @@
   font-family: 'Inter', sans-serif;
   font-size: 3.34vw;
   font-weight: 300;
-  color: #ffffff;
+  color: #FBFBFB;
   margin: 0;
   text-shadow: 0 0.104vw 0.208vw rgba(0, 0, 0, 0.3);
 }
@@ -345,7 +237,7 @@
 
 .offerings-view-all-btn:hover {
   background: #212529;
-  color: #fff;
+  color: #FBFBFB;
   transform: translateY(-0.104vw);
   box-shadow: 0 0.208vw 0.625vw rgba(0, 0, 0, 0.15);
 }
@@ -355,7 +247,6 @@
   position: relative;
   margin-bottom: 5vw;
   padding-top: 2.5vw;
-  
 }
 
 .projects-list-container {
@@ -368,7 +259,6 @@
 
 .project-item {
   border-top: 0.104vw solid #212529;
-  padding: 2.5vw 0;
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
@@ -391,17 +281,16 @@
 .project-left {
   flex: 1;
   display: flex;
-  flex-direction: column;
-  gap: 0.5vw;
+  margin-bottom: 1vw;
 }
 
-.project-title {
+.project-title-home {
   font-family: 'Inter', sans-serif;
   font-size: 6.67vw;
   font-weight: 300;
   font-style: italic;
   color: #212529;
-  margin: 0;
+  margin-top:3vw;
   line-height: 1.2;
 }
 
@@ -422,7 +311,7 @@
 .project-location {
   font-size: 1.25vw;
   color: #6c757d;
-  margin: 0;
+  margin-top: 7vw;
   font-weight: 400;
   text-align: right;
   margin-left: auto;
@@ -433,7 +322,7 @@
   top: 25.5vw;
   right: 27vw;
   width: 20vw;
-  height:30vw;
+  height: 30vw;
   z-index: 2;
   pointer-events: none;
   opacity: 0;
@@ -451,48 +340,13 @@
   transition: opacity 0.3s ease;
 }
 
-/* Responsive adjustments for Projects Section */
-@media (max-width: 1024px) {
-  .project-title {
-    font-size: 5vw;
-  }
 
-  .projects-image-container {
-    width: 40vw;
-  }
-}
-
-@media (max-width: 768px) {
-  .project-title {
-    font-size: 4vw;
-  }
-
-  .project-arrow {
-    width: 3vw;
-    height: 3vw;
-  }
-
-  .projects-image-container {
-    width: 45vw;
-  }
-}
-
-@media (max-width: 480px) {
-  .project-title {
-    font-size: 3vw;
-  }
-
-  .project-location {
-    font-size: 1vw;
-  }
-}
 
 /* Process Section */
 .process-section {
   position: relative;
   margin-bottom: 5vw;
   padding-top: 2.5vw;
-  
 }
 
 .process-section-title {
@@ -563,8 +417,10 @@
   color: #212529;
   margin: 0;
   line-height: 1.2;
-  background: #fff;       /* same as page background */
-  padding: 0 1.2vw;       /* space for border cut */
+  background: #FBFBFB;
+  /* same as page background */
+  padding: 0 1.2vw;
+  /* space for border cut */
   position: relative;
   z-index: 2;
 }
@@ -601,65 +457,12 @@
 }
 
 /* Responsive adjustments for Process Section */
-@media (max-width: 1024px) {
-  .process-section-title {
-    font-size: 2vw;
-  }
 
-  .process-title {
-    font-size: 5vw;
-  }
-
-  .process-image-container {
-    width: 40vw;
-  }
-}
-
-@media (max-width: 768px) {
-  .process-section-title {
-    font-size: 2.5vw;
-  }
-
-  .process-title {
-    font-size: 4vw;
-  }
-
-  .process-number {
-    font-size: 2vw;
-  }
-
-  .process-details {
-    font-size: 1.5vw;
-  }
-
-  .process-image-container {
-    width: 45vw;
-  }
-}
-
-@media (max-width: 480px) {
-  .process-section-title {
-    font-size: 3vw;
-  }
-
-  .process-title {
-    font-size: 3vw;
-  }
-
-  .process-number {
-    font-size: 2.5vw;
-  }
-
-  .process-details {
-    font-size: 1.75vw;
-  }
-}
 
 /* Why Choose Us Section */
 .why-choose-section {
   margin-bottom: 5vw;
   padding-top: 2.5vw;
-
 }
 
 .why-choose-image-container {
@@ -696,35 +499,7 @@
 }
 
 /* Responsive adjustments for Why Choose Us Section */
-@media (max-width: 1024px) {
-  .why-choose-title {
-    font-size: 2vw;
-  }
 
-  .why-choose-description {
-    font-size: 1.5vw;
-  }
-}
-
-@media (max-width: 768px) {
-  .why-choose-title {
-    font-size: 2.5vw;
-  }
-
-  .why-choose-description {
-    font-size: 1.75vw;
-  }
-}
-
-@media (max-width: 480px) {
-  .why-choose-title {
-    font-size: 3vw;
-  }
-
-  .why-choose-description {
-    font-size: 2vw;
-  }
-}
 
 /* Contact Section */
 .contact-section {
@@ -732,9 +507,7 @@
   gap: 18vw;
   margin-bottom: 5vw;
   padding-top: 2.5vw;
-  
 }
-
 
 /* Contact Left Side */
 .contact-left {
@@ -823,14 +596,6 @@
   flex-direction: column;
 }
 
-.contact-form-title {
-  font-family: 'Red Hat Display', sans-serif;
-  font-size: 1.25vw;
-  font-weight: 400;
-  color: #212529;
-  margin: 0 0 2vw 0;
-}
-
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -860,7 +625,7 @@
   padding: 1vw;
   border: 0.104vw solid #312e2e;
   border-radius: 0.5vw;
-  background-color: #fff;
+  background-color: #FBFBFB;
   color: #212529;
   outline: none;
   cursor: text;
@@ -898,12 +663,11 @@
   cursor: pointer;
   transition: all 0.3s ease;
   margin-top: 1vw;
-
 }
 
 .contact-submit-btn:hover {
   background-color: #212529;
-  color: #fff;
+  color: #FBFBFB;
   transform: translateY(-0.104vw);
   box-shadow: 0 0.208vw 0.625vw rgba(0, 0, 0, 0.15);
 }

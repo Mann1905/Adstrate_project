@@ -1,5 +1,6 @@
 .blogs-container {
   margin: 0 2vw;
+  background-color: #FBFBFB;
 }
 
 .blogs-hero {
@@ -40,13 +41,13 @@
 .blogs-hero-title {
   font-size: 3.34vw;
   font-weight: 400;
-  color: white;
+  color: #FBFBFB;
   margin: 0 0 1vw 0;
 }
 
 .blogs-hero-description {
   font-size: 1.25vw;
-  color: white;
+  color: #FBFBFB;
   margin: 0;
 }
 

@@ -31,7 +31,7 @@ const App: React.FC = () => {
           minHeight: '100vh' 
         }}>
           <Navbar />
-          <main style={{ flex: 1 }}>
+          <main style={{ flex: 1, backgroundColor: '#FBFBFB' }}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/home" element={<Home />} />
