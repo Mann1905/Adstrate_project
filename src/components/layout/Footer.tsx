@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
       <div className="footer-main">
 
         {/* Left Column (Links column 1) */}
-        <div className="footer-links-column">
+        <div className="footer-links-column footer-links-col-1">
           <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
             <p>Home</p>
           </Link>
@@ -36,17 +36,20 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Middle-Left Column (Links column 2) */}
-        <div className="footer-links-column">
+        <div className="footer-links-column footer-links-col-2">
           <Link to="/process" style={{ textDecoration: 'none', color: 'inherit' }}>
             <p>Process</p>
           </Link>
           <Link to="/blogs" style={{ textDecoration: 'none', color: 'inherit' }}>
             <p>Blogs</p>
           </Link>
+          <Link to="/contact" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <p>FAQ</p>
+          </Link>
         </div>
 
         {/* Middle-Right Column (Links column 3) */}
-        <div className="footer-links-column">
+        <div className="footer-links-column footer-links-col-3">
           <Link to="/quote" style={{ textDecoration: 'none', color: 'inherit' }}>
             <p>Get Quote</p>
           </Link>

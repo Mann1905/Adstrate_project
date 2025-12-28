@@ -29,7 +29,7 @@ const Projects: React.FC = () => {
           </p>
         </div>
 
-        <div className="hero-line" />
+      
       </div>
 
       <section className="section section-border">

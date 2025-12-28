@@ -1,103 +1,223 @@
 .process-main-container {
-    width: 100%;
-    background-color: #FBFBFB;
-  }
-  
-  /* Hero Section */
+  width: 100%;
+  background-color: #FBFBFB;
+}
+
+/* Hero Section - Desktop */
+.service-hero-section {
+  width: 100%;
+  padding: 2vw;
+  background-color: #FBFBFB;
+  position: relative;
+}
+
+.service-hero-image-container {
+  width: 100%;
+  max-height: 50vw;
+  position: relative;
+  border-radius: 2vw;
+  overflow: hidden;
+}
+
+.service-hero-image {
+  width: 100%;
+  height: 100%;
+  max-height: 40vw;
+  border-radius: 2vw;
+  object-fit: cover;
+  display: block;
+}
+
+.service-hero-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2vw;
+  padding: 3vw;
+  z-index: 10;
+  max-width: 70%;
+  align-items: flex-start;
+}
+
+.service-hero-text h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 3.34vw;
+  font-weight: 500;
+  color: #FBFBFB;
+  line-height: 1.2;
+  margin: 0;
+  text-align: left;
+  width: 100%;
+}
+
+.service-hero-text p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.25vw;
+  color: #FBFBFB;
+  line-height: 1.6;
+  margin: 0;
+  text-align: left;
+  width: 100%;
+}
+
+/* Process Steps - Desktop */
+.process-step {
+  display: flex;
+  border-top: 0.05vw solid #111111;
+  padding: 2vw;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  cursor: pointer;
+  gap: 4vw;
+}
+
+.process-step:last-child {
+  border-bottom: 0.05vw solid #111111;
+}
+
+.process-step > div:first-child {
+  font-family: 'Inter', sans-serif;
+  padding-top: 8vw;
+  font-size: 1.67vw;
+  font-style: italic;
+}
+
+.process-step > div:nth-child(2) {
+  font-family: 'Inter', sans-serif;
+  padding-top: 5vw;
+  font-size: 5vw;
+  font-weight: normal;
+  flex: 3;
+  padding-left: 7vw;
+}
+
+.process-step > div:nth-child(3) {
+  font-family: 'Inter', sans-serif;
+  padding-top: 2vw;
+  font-size: 1.25vw;
+  flex: 1;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  /* Hero Section - Mobile */
   .service-hero-section {
     width: 100%;
-    padding:2vw;
+    padding: 0;
+    margin: 0;
     background-color: #FBFBFB;
     position: relative;
   }
-  
+
   .service-hero-image-container {
     width: 100%;
-    max-height: 50vw;
     position: relative;
-    border-radius: 2vw;
     overflow: hidden;
+    margin: 0;
+    padding: 0;
+    max-height: none;
+    border-radius: 0;
   }
-  
+
   .service-hero-image {
     width: 100%;
-    height: 100%;
-    max-height: 40vw;
-    border-radius: 2vw;
-    object-fit: cover;
+    height: auto;
     display: block;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+    transform: scale(1.05);
+    max-height: none;
+    border-radius: 0;
   }
-  
+
   .service-hero-text {
     position: absolute;
-    bottom: 0;          
-    left: 0;            
+    bottom: 0;
+    left: 0;
     display: flex;
     flex-direction: column;
-    gap: 1.2vw;
-    padding: 3vw;    
+    gap: 2.5vw;
+    padding: 4vw;
     z-index: 10;
-    max-width: 70%;     
+    max-width: 85%;
     align-items: flex-start;
   }
-  
-  
+
   .service-hero-text h2 {
-    font-family: 'Inter', sans-serif;
-    font-size:3.34vw;
+    font-family: sans-serif;
+    font-size: 8vw;
     font-weight: 500;
-    color:#FBFBFB;
+    color: #FBFBFB;
     line-height: 1.2;
     margin: 0;
-    text-align: left;
     width: 100%;
   }
-  
+
   .service-hero-text p {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.25vw;
-    color: #FBFBFB;
-    line-height: 1.6;
+    font-family: sans-serif;
+    font-size: 4vw;
+    color: rgba(251, 251, 251, 0.95);
+    line-height: 1.5;
     margin: 0;
-    text-align: left;
     width: 100%;
   }
-  
+
+  /* Process Steps - Mobile */
   .process-step {
     display: flex;
-    border-top: 0.05vw solid #111111;
-    padding: 2vw ;
-    margin-left: 2vw;
-    margin-right: 2vw;
+    flex-direction: column;
+    border-top: 1px solid #E0E0E0;
+    padding: 4vw 4vw;
+    margin-top: 5vw;
     cursor: pointer;
     gap: 4vw;
+    background-color: #FFFFFF;
   }
-  
+
+
+
   .process-step:last-child {
-    border-bottom: 0.05vw solid #111111;
+    border-bottom: 1px solid #E0E0E0;
   }
-  
+
   .process-step > div:first-child {
     font-family: 'Inter', sans-serif;
-
-    padding-top: 8vw;
-    font-size: 1.67vw;
+    font-size: 5vw;
     font-style: italic;
+    color: #111111;
+    margin: 0;
+    padding: 0;
+    padding-top: 0;
+    text-align: left;
   }
-  
+
   .process-step > div:nth-child(2) {
     font-family: 'Inter', sans-serif;
-    padding-top: 5vw;
-    font-size: 5vw;
-    font-weight: normal;
-    flex: 3;
-    padding-left: 7vw;
+    font-size: 5.5vw;
+    color: #111111;
+    margin: 0;
+    padding: 0;
+    padding-top: 0;
+    padding-left: 0;
+    text-align: left;
+    line-height: 1.1;
+    flex: none;
   }
-  
+
   .process-step > div:nth-child(3) {
     font-family: 'Inter', sans-serif;
-    padding-top: 2vw;
-    font-size: 1.25vw;
-    flex: 1;
+    font-size: 3.5vw;
+    color: #111111;
+    margin: 0;
+    padding: 0;
+    padding-top: 0;
+    text-align: left;
+    line-height: 1.5;
+    margin-top: 2vw;
+    flex: none;
   }
+}
   

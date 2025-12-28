@@ -152,8 +152,176 @@
 
   .founder-image {
     width: 100%;
-    height: auto;
+    height: 35vw;
     border-radius: 1.5vw;
     object-fit: cover;
+    object-position: center 40%;
+
   }
+
+@media (max-width: 768px) {
+  .about-container {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-hero {
+    display: contents;
+  }
+
+  .about-hero-left {
+    width: 100%;
+    margin-top: 4vw;
+    margin-bottom: 0;
+    padding: 0 4vw;
+    order: 1;
+  }
+
+  .about-hero-right {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 6vw;
+    padding: 0 4vw;
+    order: 3;
+  }
+
+  .about-hero-left h1 {
+    font-size: 8vw;
+    max-width: 85vw;
+    margin: 0 0 3vw 0;
+  }
+
+  .about-hero-right p {
+    font-size: 3.5vw;
+    margin-top: 0;
+  }
+
+  .about-image-wrap {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    padding: 0;
+    order: 2;
+    margin-top: 4vw;
+    margin-bottom: 4vw;
+  }
+
+  .about-image {
+    width: 100vw;
+    height: 100vw;
+    border-radius: 0;
+    margin: 0;
+    display: block;
+  }
+
+  .about-content {
+    display: contents;
+  }
+
+  .about-col-1 {
+    width: 100%;
+    margin-bottom: 6vw;
+    padding: 0 4vw;
+    order: 7;
+  }
+
+  .about-col-2 {
+    display: contents;
+  }
+
+  .about-col-3 {
+    width: 100%;
+    margin-bottom: 6vw;
+    order: 4;
+  }
+
+  .about-section {
+    margin-bottom: 6vw;
+    padding: 0 4vw;
+    order: 5;
+  }
+
+  .about-section-mission {
+    margin-top: 0;
+    order: 6;
+  }
+
+  .about-section-title {
+    font-size: 5.5vw;
+    margin: 0 0 3vw 0;
+  }
+
+  .about-section-text-left {
+    font-size: 3.5vw;
+    max-width: 100%;
+    margin: 0 0 3vw 0;
+  }
+
+  .about-section-text {
+    font-size: 3.5vw;
+    max-width: 100%;
+    margin: 0 0 3vw 0;
+  }
+
+  .about-content-image {
+    width: 100vw;
+    height: 100vw;
+    border-radius: 0;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    margin-top: 4vw;
+    margin-bottom: 4vw;
+    display: block;
+  }
+
+  .founder-section {
+    display: contents;
+  }
+
+  .founder-left {
+    width: 100%;
+    min-height: auto;
+    margin-bottom: 6vw;
+    padding: 0 4vw;
+    order: 8;
+  }
+
+  .founder-heading {
+    font-size: 3.5vw;
+    margin: 0 0 3vw 0;
+  }
+
+  .founder-name-wrapper {
+    margin-top: 0;
+    margin-bottom: 4vw;
+  }
+
+  .founder-name {
+    font-size: 12vw;
+    margin: 0;
+  }
+
+  .founder-text {
+    font-size: 3.5vw;
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .founder-right {
+    width: 100%;
+    order: 7;
+  }
+
+  .founder-image {
+    width: 100vw;
+    height: 100vw;
+    border-radius: 0;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    margin-top: 6vw;
+    margin-bottom: 4vw;
+    display: block;
+  }
+}
   

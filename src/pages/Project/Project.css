@@ -113,3 +113,158 @@
   min-width: 0;
 }
 
+/* Mobile Styles - All sizing in vw units */
+@media (max-width: 768px) {
+  .project-container {
+    margin: 0;
+    
+    background-color: #FFFFFF;
+  }
+
+  .project-hero-image-wrap {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .project-hero-image {
+    width: 100%;
+    height: 100vw;
+    
+    border-radius: 0;
+    object-fit: cover;
+  }
+
+  .project-title {
+    font-size: 8vw;
+    font-weight: 500;
+    max-width: 70vw;
+    padding: 0 4vw;
+    margin: 6vw 0 12vw 0;
+    
+  }
+
+  .project-main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+    margin-bottom: 6vw;
+    align-items: stretch;
+  }
+
+  .project-col-1,
+  .project-col-2{
+    flex: none;
+    width: 100%;
+    padding: 0 4vw;
+
+  }
+  .project-col-3 {
+    flex: none;
+    width: 100%;
+  }
+
+  .project-col-3 {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .project-section {
+    margin-bottom: 6vw;
+
+  }
+
+  .project-section-title {
+    font-size: 4vw;
+    font-weight: 420;
+    font-style: italic;
+    margin: 0 0 2vw 0;
+  }
+
+  .project-section-text-left {
+    font-size: 4.5vw;
+    font-weight: 450;
+    max-width: 100%;
+    margin: 0 0 4vw 0;
+    line-height: 1.6;
+  }
+
+  .project-section-solutions {
+    margin-top: 0;
+  }
+
+  .project-section-text {
+    font-size: 4.5vw;
+    font-weight: 400;
+    max-width: 100%;
+    margin: 0 0 10vw 0;
+    line-height: 1.6;
+  }
+
+  .project-content-image {
+    display: block;
+    width: 100%;
+    height: 150vw;
+    border-radius: 0;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+  }
+
+  .project-details {
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+    margin-top: 4vw;
+    margin-bottom: 15vw;
+    font-size: 5vw;
+    font-weight: 400;
+  }
+
+  .project-bottom-images {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4vw;
+    margin-top: 6vw;
+    width: 100%;
+    padding: 0 3vw;
+    box-sizing: border-box;
+  }
+
+  .project-bottom-image,
+  .project-bottom-image-large,
+  .project-bottom-image-small {
+    border-radius: 2vw;
+    object-fit: cover;
+    display: block;
+    height: 60vw;
+  }
+
+  .project-bottom-image-large {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    width: 100vw;
+    height: 100vw;
+    margin: 0 auto;
+  }
+
+  .project-bottom-image-small {
+    width: 100%;
+    height:60vw;
+  }
+
+  .project-bottom-image-small:first-of-type {
+    grid-column: 1;
+    grid-row: 2;
+    
+  }
+
+  .project-bottom-image-small:last-of-type {
+    grid-column: 2;
+    grid-row: 2;
+
+  }
+}
+

@@ -9,6 +9,7 @@
 .hero {
   width: 100%;
   margin-top: 2vw;
+  margin-bottom: 12vw;
 }
 
 .hero-img {
@@ -40,7 +41,6 @@
   line-height: 1.6;
   margin-top: 3vw;
   max-width: 46vw;
-
 }
 
 .hero-line {
@@ -50,6 +50,11 @@
 
 .section {
   padding: 3.4vw 0 3.6vw 0;
+}
+
+.section:first-of-type {
+  margin-top: 0;
+  padding-top: 3.4vw;
 }
 
 .section-border {
@@ -128,6 +133,126 @@
   border-radius: 1.5vw;
   object-fit: cover;
   display: block;
+}
+
+@media (max-width: 768px) {
+  .projects {
+    margin: 0 5.33vw;
+  }
+
+  .hero {
+    margin-top: 0;
+    margin-bottom: 95.67vw;
+  }
+
+  .hero-img {
+    height: 64vw;
+    border-radius: 4vw;
+    margin-bottom: 5.33vw;
+  }
+
+  .hero-row {
+    flex-direction: column;
+    gap: 0;
+    margin-top: 0;
+  }
+
+  .hero-title {
+    font-size: 8vw;
+    font-weight: 400;
+    max-width: 100%;
+    margin: 0 0 5.33vw 0;
+  }
+
+  .hero-text {
+    font-size: 4vw;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-top: 0;
+    max-width: 100%;
+    margin-bottom: 10.67vw;
+  }
+
+  .hero-line {
+    display: none;
+  }
+
+  .section {
+    padding: 10.67vw 0;
+  }
+
+  .section:first-of-type {
+    padding-top: 0;
+    border-top: 0.27vw solid rgba(0, 0, 0, 0.826);
+
+  }
+
+  .section-border {
+    border-top: 0.27vw solid rgba(0, 0, 0, 0.826);
+  }
+
+  .section-border-last {
+    border-bottom: 0.27vw solid rgba(0, 0, 0, 0.831);
+    margin-bottom: 0;
+  }
+
+  .section-grid {
+    flex-direction: column;
+    gap: 0;
+    align-items: stretch;
+  }
+
+  .info {
+    order: 2;
+  }
+
+  .image-wrap {
+    order: 1;
+    margin-bottom: 5.33vw;
+  }
+
+  .title {
+    font-size: 7.47vw;
+    font-weight: 400;
+    max-width: 100%;
+    margin: 0 0 4vw 0;
+  }
+
+  .label {
+    font-size: 4.27vw;
+    font-style: italic;
+    font-weight: 300;
+    margin: 0 0 2.67vw 0;
+  }
+
+  .copy {
+    font-size: 4vw;
+    font-weight: 300;
+    line-height: 1.6;
+    margin: 0 0 5.33vw 0;
+    max-width: 100%;
+  }
+
+  .projects-btn-link {
+    display: block;
+    width: 100%;
+  }
+
+  .projects-btn {
+    display: block;
+    width: 100%;
+    min-width: auto;
+    padding: 3.2vw 0;
+    border-radius: 2.67vw;
+    border-width: 0.27vw;
+    font-size: 4vw;
+    font-weight: 400;
+  }
+
+  .image {
+    height: 64vw;
+    border-radius: 4vw;
+  }
 }
 
 

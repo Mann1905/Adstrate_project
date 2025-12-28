@@ -163,3 +163,181 @@
   color: #FBFBFB;
 }
 
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  .container {
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  /* Progress Steps - Mobile */
+  .right {
+    flex: 1;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 4vw;
+    order: 1;
+  }
+
+  .steps {
+    display: flex;
+    gap: 4vw;
+    margin-bottom: 6vw;
+    justify-content: center;
+  }
+
+  .step {
+    width: 8vw;
+    height: 8vw;
+    border-radius: 50%;
+    border: 1px solid #000;
+    background-color: #FFFFFF;
+    color: #000;
+    font-size: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: 400;
+  }
+
+  .step.active {
+    background-color: #000;
+    color: #FFFFFF;
+  }
+
+  /* Form - Mobile */
+  .right form {
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+    max-width: 100%;
+  }
+
+  .right form > div {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+  }
+
+  .right form label {
+    font-size: 3.5vw;
+    font-family: 'Red Hat Display', sans-serif;
+    color: #333;
+    font-weight: 400;
+  }
+
+  .right form input {
+    width: 100%;
+    padding: 3vw;
+    border: 1px solid #E0E0E0;
+    border-radius: 2vw;
+    font-size: 3.5vw;
+    font-family: inherit;
+    color: #333;
+    background-color: #FFFFFF;
+  }
+
+  .right form input::placeholder {
+    color: #999;
+  }
+
+  .right form input:focus {
+    outline: none;
+    border-color: #000;
+  }
+
+  .right form h3 {
+    font-size: 3.5vw;
+    font-family: 'Red Hat Display', sans-serif;
+    color: #333;
+    font-weight: 400;
+    margin: 0 0 2vw 0;
+  }
+
+  .right form textarea {
+    width: 100%;
+    padding: 3vw;
+    border: 1px solid #E0E0E0;
+    border-radius: 2vw;
+    font-size: 3.5vw;
+    font-family: inherit;
+    color: #333;
+    min-height: 20vw;
+    resize: vertical;
+    background-color: #FFFFFF;
+  }
+
+  .right form textarea::placeholder {
+    color: #999;
+  }
+
+  .right form textarea:focus {
+    outline: none;
+    border-color: #000;
+  }
+
+  .right form button {
+    padding: 4vw 8vw;
+    border: 1px solid #000;
+    max-width: 100%;
+    width: 100%;
+    border-radius: 2vw;
+    background-color: #FFFFFF;
+    color: #000;
+    font-size: 4vw;
+    font-family: inherit;
+    cursor: pointer;
+    font-weight: 400;
+    margin-top: 4vw;
+    align-self: center;
+  }
+
+  .right form button:hover {
+    background-color: #000;
+    color: #FFFFFF;
+  }
+
+  /* Left Section (Description & Image) - Mobile */
+  .left {
+    flex: 1;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+    padding: 4vw;
+    order: 2;
+  }
+
+  .left h2 {
+    font-size: 4vw;
+    font-style: italic;
+    color: #333;
+    font-weight: 300;
+    line-height: 1.3;
+    margin: 0;
+  }
+
+  .left p {
+    font-size: 4vw;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .left img {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    margin-top: 4vw;
+  }
+}
+
