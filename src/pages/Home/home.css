@@ -671,3 +671,419 @@
   transform: translateY(-0.104vw);
   box-shadow: 0 0.208vw 0.625vw rgba(0, 0, 0, 0.15);
 }
+
+/* Mobile Media Query - All sizing in vw */
+@media screen and (max-width: 768px) {
+  /* Global Homepage Container */
+  .homepage-container {
+    margin-left: 4vw;
+    margin-right: 4vw;
+  }
+
+  /* Section 1 - Hero Section */
+  .hero-section {
+    flex-direction: column;
+    gap: 6vw;
+    margin-bottom: 10vw;
+    padding-top: 0;
+  }
+
+  .hero-left {
+    gap: 3vw;
+    order: 2;
+  }
+
+  .hero-subtitle {
+    font-size: 3.5vw;
+  }
+
+  .homepage-container .home-hero-title {
+    font-size: 11vw;
+    max-width: 100%;
+  }
+
+  .hero-description {
+    font-size:4.5vw;
+    max-width: 100%;
+  }
+
+  .hero-buttons {
+    flex-direction: row;
+    gap: 5vw;
+    margin-top: 3vw;
+  }
+
+  .btn-outlined,
+  .btn-filled { 
+    max-width: 100%;   
+    flex: 1;
+    padding: 5vw 7vw;
+    border-radius: 10vw;
+    font-size: 5vw;
+    border-width: 0.3vw;
+  }
+
+  .hero-highlights {
+    flex-direction: row;
+    gap: 17vw;
+    margin-top: 3vw;
+    
+  }
+
+  .hero-highlights p {
+    color: rgba(0, 0, 0, 0.792);
+    font-size: 5vw;
+  }
+
+  .hero-right {
+    order: 1;
+    flex: none;
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: -4vw;
+    margin-right: -4vw;
+    padding: 0;
+    display: block;
+    align-items: stretch;
+    justify-content: stretch;
+  }
+
+  .hero-right img {
+    width: 100vw;
+    max-width: 100vw;
+    height: 120vw;
+    border-radius: 0;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Section 2 - About Section */
+  .about-section-home {
+    flex-direction: column;
+    gap: 12vw;
+    margin-bottom: 10vw;
+    padding-top: 2vw;
+  }
+
+  .about-left {
+    gap: 8vw;
+  }
+
+  .about-tagline {
+    font-size: 12vw;
+  }
+
+  .about-right {
+    gap: 8vw;
+  }
+
+  .about-heading {
+    font-size: 6vw;
+    margin-top: 4vw;
+  }
+
+  .about-description {
+    font-size: 4.5vw;
+  }
+
+  .about-left .btn-outlined {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Offerings Section */
+  .offerings-section {
+    margin-bottom: 10vw;
+    padding-top: 10vw;
+  }
+
+  .offerings-title {
+    font-size: 6vw;
+    margin: 0 0 15vw 0;
+  }
+
+  .offerings-cards {
+    flex-direction: column;
+    gap: 4vw;
+    margin-bottom: 5vw;
+  }
+
+  .offering-card {
+    border-radius: 2vw;
+  }
+
+  .offering-card-text {
+    bottom: 6vw;
+    left: 4vw;
+    font-size: 13vw;
+    text-shadow: 0 0.3vw 0.5vw rgba(0, 0, 0, 0.3);
+  }
+
+  .offerings-button-container {
+    width: 100%;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .offerings-button-container a {
+    width: 100%;
+    display: block;
+  }
+
+  .offerings-view-all-btn {
+    width: 100%;
+    max-width: 100%;
+    flex: 1;
+    padding: 5vw 7vw;
+    border-radius: 10vw;
+    font-size: 5vw;
+    border-width: 0.3vw;
+    box-sizing: border-box;
+  }
+
+  /* Projects Section */
+  .projects-section {
+    margin-bottom: 10vw;
+    padding-top: 5vw;
+  }
+
+  .projects-list-container::before {
+    content: "Projects";
+    font-family: 'Inter', sans-serif;
+    font-size: 6vw;
+    font-style: italic;
+    font-weight: 400;
+    color: #212529;
+    display: block;
+    margin-bottom: 6vw;
+  }
+
+  .project-item {
+    border-top-width: 0.3vw;
+  }
+
+  .project-item-last {
+    border-bottom-width: 0.3vw;
+  }
+
+  .project-content {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 0;
+    align-items: start;
+    width: 100%;
+  }
+
+  .project-left {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    margin-bottom: 0;
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .project-title-home {
+    font-size: 10vw;
+    margin-top: 5vw;
+    margin-bottom: 0;
+    grid-column: 1;
+  }
+
+  .project-location {
+    font-size: 4vw;
+    margin-top: 2vw;
+    margin-bottom: 4vw;
+    text-align: left;
+    margin-left: 0;
+    grid-column: 1;
+  }
+
+  .project-arrow {
+    width: 10vw;
+    height: 10vw;
+    grid-column: 2;
+    grid-row: 1;
+    align-self: start;
+    flex-shrink: 0;
+    margin-top: 5vw;
+  }
+
+  
+
+
+  .projects-image-container {
+    display: none;
+  }
+
+  /* Process Section */
+  .process-section {
+    margin-bottom: 10vw;
+    padding-top: 5vw;
+  }
+
+  .process-section-title {
+    font-size: 4vw;
+    margin: 0 0 5vw 0;
+  }
+
+  .process-item {
+    border-bottom-width: 0.3vw;
+    padding: 5vw 0;
+  }
+
+  .process-item:first-child {
+    border-top-width: 0.3vw;
+    border-bottom-width: 0.3vw;
+  }
+
+  .process-item-last {
+    border-bottom-width: 0.3vw;
+  }
+
+  .process-content {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 0;
+    align-items: start;
+    width: 100%;
+  }
+
+  .process-left {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    flex-direction: column;
+    gap: 2vw;
+    align-items: flex-start;
+  }
+
+  .process-number {
+    font-size: 4vw;
+  }
+
+  .process-title {
+    font-size: 10vw;
+    padding: 0 2vw;
+  }
+
+  .process-details {
+    font-size: 3vw;
+    margin-top:20vw ;
+    grid-column: 2;
+    grid-row: 2;
+    align-self: end;
+    text-align: right;
+  }
+
+  .process-image-container {
+    display: none;
+  }
+
+  /* Why Choose Us Section */
+  .why-choose-section {
+    margin-bottom: 10vw;
+    padding-top: 5vw;
+  }
+
+  .why-choose-image-container {
+    margin-bottom: 5vw;
+    border-radius: 2vw;
+  }
+
+  .why-choose-title {
+    font-size: 5.5vw;
+    margin: 0 0 5vw 0;
+  }
+
+  .why-choose-description {
+    font-size: 4.5vw;
+    text-indent: 0;
+    line-height: 1.6;
+  }
+
+  /* Contact Section */
+  .contact-section {
+    flex-direction: column;
+    gap: 8vw;
+    margin-bottom: 10vw;
+    padding-top: 5vw;
+  }
+
+  .contact-left {
+    gap: 5vw;
+  }
+
+  .contact-title {
+    font-size: 8vw;
+  }
+
+  .contact-description {
+    font-size: 4.5vw;
+  }
+
+  .contact-info {
+    gap: 3vw;
+  }
+
+  .contact-phone,
+  .contact-email {
+    font-size: 3vw;
+  }
+
+  .contact-social-icons {
+    gap: 3vw;
+    margin-top: 3vw;
+  }
+
+  .contact-social-icon {
+    width: 8vw;
+    height: 8vw;
+  }
+
+  .contact-form {
+    gap: 4vw;
+  }
+
+  .home-form {
+    gap: 2vw;
+  }
+
+  .contact-form-label {
+    font-size: 3vw;
+    margin-bottom: 1vw;
+  }
+
+  .home-form input,
+  .home-form textarea {
+    font-size: 3vw;
+    padding: 3vw;
+    border-width: 0.3vw;
+    border-radius: 1.5vw;
+  }
+
+  .home-form input::placeholder,
+  .home-form textarea::placeholder {
+    font-size: 3vw;
+  }
+
+  .home-form textarea {
+    min-height: 20vw;
+  }
+
+  .contact-submit-btn {
+    font-size: 3.5vw;
+    border-width: 0.3vw;
+    border-radius: 3vw;
+    padding: 4vw 6vw;
+    margin-top: 3vw;
+  }
+
+  .contact-submit-btn:hover {
+    transform: translateY(-0.3vw);
+    box-shadow: 0 0.5vw 1.5vw rgba(0, 0, 0, 0.15);
+  }
+}
