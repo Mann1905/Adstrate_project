@@ -6,6 +6,7 @@ import './home.css';
 const Home: React.FC = () => {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
   const [hoveredProcess, setHoveredProcess] = useState<number | null>(null);
+  const [mousePosition, setMousePosition] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
   return (
     <div className="homepage-container">
       <Helmet>
@@ -19,6 +20,7 @@ const Home: React.FC = () => {
 
       {/* Section 1 - Hero */}
       <section className="hero-section">
+        <div className="hero-inner">
         <div className="hero-left">
           <p className="hero-subtitle">Budget-Friendly Interior Design Experts in Mumbai</p>
           <h2 className="home-hero-title">
@@ -45,6 +47,7 @@ const Home: React.FC = () => {
         </div>
         <div className="hero-right">
           <img src="/assets/images/01_HomePage/HeroSection_01.jpg" alt="Interior Design" />
+        </div>
         </div>
       </section>
 
@@ -96,6 +99,7 @@ const Home: React.FC = () => {
               className="project-item"
               onMouseEnter={() => setHoveredProject(0)}
               onMouseLeave={() => setHoveredProject(null)}
+              onMouseMove={(e) => setMousePosition({ x: e.clientX, y: e.clientY })}
             >
               <div className="project-content">
                 <div className="project-left">
@@ -113,6 +117,7 @@ const Home: React.FC = () => {
               className="project-item"
               onMouseEnter={() => setHoveredProject(1)}
               onMouseLeave={() => setHoveredProject(null)}
+              onMouseMove={(e) => setMousePosition({ x: e.clientX, y: e.clientY })}
             >
               <div className="project-content">
                 <div className="project-left">
@@ -130,6 +135,7 @@ const Home: React.FC = () => {
               className="project-item"
               onMouseEnter={() => setHoveredProject(2)}
               onMouseLeave={() => setHoveredProject(null)}
+              onMouseMove={(e) => setMousePosition({ x: e.clientX, y: e.clientY })}
             >
               <div className="project-content">
                 <div className="project-left">
@@ -147,6 +153,7 @@ const Home: React.FC = () => {
               className="project-item project-item-last"
               onMouseEnter={() => setHoveredProject(3)}
               onMouseLeave={() => setHoveredProject(null)}
+              onMouseMove={(e) => setMousePosition({ x: e.clientX, y: e.clientY })}
             >
               <div className="project-content">
                 <div className="project-left">
@@ -160,7 +167,13 @@ const Home: React.FC = () => {
             </div>
           </Link>
         </div>
-        <div className="projects-image-container">
+        <div 
+          className={`projects-image-container ${hoveredProject !== null ? 'visible' : ''}`}
+          style={{
+            left: hoveredProject !== null ? `${mousePosition.x}px` : 'auto',
+            top: hoveredProject !== null ? `${mousePosition.y}px` : 'auto',
+          }}
+        >
           {hoveredProject !== null ? (
             <img 
               src={
@@ -195,8 +208,8 @@ const Home: React.FC = () => {
       <section className="why-choose-section">
         <div className="why-choose-image-container">
           <img 
-            src="" 
-            alt="now" 
+            src="/assets/images/01_HomePage/image 8.png" 
+            alt="Interior Design Process" 
             className="why-choose-image"
           />
         </div>
@@ -212,6 +225,7 @@ const Home: React.FC = () => {
             className="process-item"
             onMouseEnter={() => setHoveredProcess(0)}
             onMouseLeave={() => setHoveredProcess(null)}
+            onMouseMove={(e) => setMousePosition({ x: e.clientX, y: e.clientY })}
           >
             <div className="process-content">
               <div className="process-left">
@@ -227,6 +241,7 @@ const Home: React.FC = () => {
             className="process-item"
             onMouseEnter={() => setHoveredProcess(1)}
             onMouseLeave={() => setHoveredProcess(null)}
+            onMouseMove={(e) => setMousePosition({ x: e.clientX, y: e.clientY })}
           >
             <div className="process-content">
               <div className="process-left">
@@ -242,6 +257,7 @@ const Home: React.FC = () => {
             className="process-item"
             onMouseEnter={() => setHoveredProcess(2)}
             onMouseLeave={() => setHoveredProcess(null)}
+            onMouseMove={(e) => setMousePosition({ x: e.clientX, y: e.clientY })}
           >
             <div className="process-content">
               <div className="process-left">
@@ -257,6 +273,7 @@ const Home: React.FC = () => {
             className="process-item"
             onMouseEnter={() => setHoveredProcess(3)}
             onMouseLeave={() => setHoveredProcess(null)}
+            onMouseMove={(e) => setMousePosition({ x: e.clientX, y: e.clientY })}
           >
             <div className="process-content">
               <div className="process-left">
@@ -272,6 +289,7 @@ const Home: React.FC = () => {
             className="process-item"
             onMouseEnter={() => setHoveredProcess(4)}
             onMouseLeave={() => setHoveredProcess(null)}
+            onMouseMove={(e) => setMousePosition({ x: e.clientX, y: e.clientY })}
           >
             <div className="process-content">
               <div className="process-left">
@@ -287,6 +305,7 @@ const Home: React.FC = () => {
             className="process-item process-item-last"
             onMouseEnter={() => setHoveredProcess(5)}
             onMouseLeave={() => setHoveredProcess(null)}
+            onMouseMove={(e) => setMousePosition({ x: e.clientX, y: e.clientY })}
           >
             <div className="process-content">
               <div className="process-left">
@@ -299,7 +318,13 @@ const Home: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="process-image-container">
+        <div 
+          className={`process-image-container ${hoveredProcess !== null ? 'visible' : ''}`}
+          style={{
+            left: hoveredProcess !== null ? `${mousePosition.x}px` : 'auto',
+            top: hoveredProcess !== null ? `${mousePosition.y}px` : 'auto',
+          }}
+        >
           {hoveredProcess !== null ? (
             <img 
               src={

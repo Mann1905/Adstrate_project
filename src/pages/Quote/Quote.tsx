@@ -58,7 +58,7 @@ const Quote: React.FC = () => {
           <>
             <label>Any Customization Required</label>
             <div>
-              <textarea placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris feugiat rhoncus pretium. Praesent nec lorem tortor. Nulla ut imperdiet dui."></textarea>
+              <textarea placeholder="input"></textarea>
             </div>
           </>
         );
