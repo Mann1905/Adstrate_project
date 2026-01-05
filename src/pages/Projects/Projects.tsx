@@ -120,7 +120,7 @@ const Projects: React.FC = () => {
           <div className="image-wrap">
             <img
               className="image"
-          src="public\assets\images\05_OurProjectDetailsPage\project4\IMG-20250717-WA0000.jpg"
+              src="/assets/images/05_OurProjectDetailsPage/project4/IMG-20250717-WA0000.jpg"
               alt="Raheja Complex hall interior with seating and storage"
             />
           </div>

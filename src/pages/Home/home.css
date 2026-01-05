@@ -13,7 +13,8 @@
 
 /* Section 1 - Hero Section */
 .hero-section {
-  height: calc(100vh - 7vw); /* subtract navbar */
+  height: calc(100vh - 7vw);
+  /* subtract navbar */
   margin-top: 2vw;
   display: flex;
   align-items: center;
@@ -273,17 +274,24 @@
   z-index: 1;
 }
 
+/* Target the Link component wrapper directly */
 .project-item {
   border-top: 0.104vw solid #212529;
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
   z-index: 1;
+  padding: 0;
+  /* Reset padding */
 }
 
 .project-item-last {
   border-bottom: 0.104vw solid #212529;
 }
+
+/* Standard generic hover if needed later */
+
+/* .project-item-last border removed as it is handled by .projects-list-container::after */
 
 .project-content {
   display: flex;
@@ -306,7 +314,7 @@
   font-weight: 300;
   font-style: italic;
   color: #212529;
-  margin-top:3vw;
+  margin-top: 3vw;
   line-height: 1.2;
 }
 
@@ -383,36 +391,73 @@
 }
 
 .process-item {
-  border-bottom: 0.104vw solid #212529;
-  padding: 2.5vw 0;
+  border-top: 0.104vw solid #212529;
+  border-bottom: none;
+  padding: 1.5vw 0 2.5vw 0;
+  /* Reduced top padding to bring text closer to the partition line */
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
   z-index: 1;
+  background-color: #FBFBFB;
+  /* Mask the item below */
+  margin-top: -5.5vw;
+  /* Aggressive overlap to cover the previous item's bottom area */
 }
 
 .process-item:first-child {
   border-top: 0.104vw solid #212529;
-  border-bottom: 0.104vw solid #212529;
+  border-bottom: none;
+  margin-top: 0;
+  padding-top: 2.5vw;
+  /* Normal padding for the first item */
 }
 
-.process-item-last {
-  border-bottom: 0.104vw solid #212529;
+/* Ghost element to cut the last item */
+/* Ghost element to cut the last item - Process Only */
+.process-list-container::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5vw;
+  /* Ensure enough height to act as a mask/base */
+  background-color: #FBFBFB;
+  /* Mask the content of the last item */
+  border-top: 0.104vw solid #212529;
+  /* The cut line */
+  margin-top: -5.5vw;
+  /* Same overlap as items */
+  position: relative;
+  z-index: 5;
+}
+
+.process-item:last-child {
+  border-bottom: none;
+  /* Removed, handled by ghost element */
+}
+
+/* Hover effect removed to keep text cut */
+.process-item:hover {
+  transform: none;
+  z-index: 1;
 }
 
 .process-content {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   gap: 2vw;
   position: relative;
   z-index: 1;
+  margin-top: 0;
+  /* Reset negative margin from previous attempt */
 }
 
 .process-left {
   flex: 1;
   display: flex;
-  align-items: baseline;
+  align-items: flex-start;
+  /* Changed from baseline to keep number at top */
   gap: 1.5vw;
 }
 
@@ -422,6 +467,8 @@
   font-weight: 400;
   color: #212529;
   margin: 0;
+  padding-top: 0.5vw;
+  /* Align nicely with the top of the title text */
 }
 
 .process-title {
@@ -432,10 +479,8 @@
   color: #212529;
   margin: 0;
   line-height: 1.2;
-  background: #FBFBFB;
-  /* same as page background */
-  padding: 0 1.2vw;
-  /* space for border cut */
+  background: transparent;
+  padding: 0;
   position: relative;
   z-index: 2;
 }
@@ -443,9 +488,19 @@
 .process-details {
   font-size: 1.25vw;
   color: #212529;
-  margin-top: 6vw;
+  margin-top: 0;
   font-weight: 400;
   flex-shrink: 0;
+  background: transparent;
+  padding: 0;
+  margin-top: 0;
+  font-weight: 400;
+  flex-shrink: 0;
+  background: #FBFBFB;
+  /* Mask the line */
+  padding: 0 0.5vw;
+  position: relative;
+  z-index: 2;
 }
 
 .process-image-container {
@@ -485,7 +540,7 @@
   margin-bottom: 2.5vw;
   border-radius: 1.04vw;
   overflow: hidden;
-  
+
 }
 
 .why-choose-image {
@@ -690,6 +745,7 @@
 
 /* Mobile Media Query - All sizing in vw */
 @media screen and (max-width: 768px) {
+
   /* Global Homepage Container */
   .homepage-container {
     margin-left: 4vw;
@@ -743,8 +799,8 @@
   }
 
   .btn-outlined,
-  .btn-filled { 
-    max-width: 100%;   
+  .btn-filled {
+    max-width: 100%;
     flex: 1;
     padding: 4vw 6vw;
     border-radius: 10vw;
@@ -774,7 +830,7 @@
   .hero-highlights p {
     color: rgba(0, 0, 0, 0.792);
     font-size: 4.5vw;
-    
+
   }
 
   .hero-right {
@@ -948,7 +1004,7 @@
     margin-top: 5vw;
   }
 
-  
+
 
 
   .projects-image-container {
@@ -1008,7 +1064,7 @@
 
   .process-details {
     font-size: 3vw;
-    margin-top:20vw ;
+    margin-top: 20vw;
     grid-column: 2;
     grid-row: 2;
     align-self: end;
