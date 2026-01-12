@@ -84,7 +84,7 @@ const About: React.FC = () => {
         <div className="founder-right">
           <img
             className="founder-image"
-            src="/assets/images/02_AboutPage/founder_img.jpeg"
+            src="assets\images\02_AboutPage\founder_img.jpg"
             alt="Founder Arvind Nishad"
           />
         </div>

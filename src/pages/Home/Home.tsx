@@ -273,7 +273,7 @@ const Home: React.FC = () => {
       <section className="why-choose-section">
         <div className="why-choose-image-container">
           <img 
-            src="/assets/images/01_HomePage/image 8.png" 
+            src="public\assets\images\01_HomePage\image 8.jpg" 
             alt="Interior Design Process" 
             className="why-choose-image"
           />
