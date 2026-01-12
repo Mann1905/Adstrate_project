@@ -7,6 +7,71 @@ const Home: React.FC = () => {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
   const [hoveredProcess, setHoveredProcess] = useState<number | null>(null);
   const [mousePosition, setMousePosition] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error' | null; text: string }>({ type: null, text: '' });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitMessage({ type: null, text: '' });
+
+    try {
+      // Use environment variable or fallback to direct PHP server URL
+      const apiUrl = import.meta.env.VITE_PHP_API_URL || 
+                     (window.location.hostname === 'localhost' ? 'http://localhost:8000/mail.php' : '/mail.php');
+      
+      console.log('Sending request to:', apiUrl);
+      
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      console.log('Response status:', response.status);
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error('Response error:', errorText);
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      console.log('Response data:', data);
+
+      if (data.success) {
+        setSubmitMessage({ type: 'success', text: data.message || 'Email sent successfully!' });
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setSubmitMessage({ type: 'error', text: data.message || 'Failed to send email. Please try again.' });
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      setSubmitMessage({ 
+        type: 'error', 
+        text: `Network error: ${errorMessage}. Please ensure the PHP server is running on port 8000.` 
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   return (
     <div className="homepage-container">
       <Helmet>
@@ -381,21 +446,73 @@ const Home: React.FC = () => {
           </div>
         </div>
         <div className="contact-right">
-          <div className="contact-form">
+          <form className="contact-form" onSubmit={handleSubmit}>
             <div className="home-form">
               <label className="contact-form-label">Full Name</label>
-              <input type="text" placeholder="Full Name" />
+              <input 
+                type="text" 
+                name="name"
+                placeholder="Full Name" 
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
             </div>
             <div className="home-form">
-              <label className="contact-form-label">Phone No</label>
-              <input type="tel" placeholder="Phone No" />
+              <label className="contact-form-label">Email</label>
+              <input 
+                type="email" 
+                name="email"
+                placeholder="Email" 
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="home-form">
+              <label className="contact-form-label">Subject</label>
+              <input 
+                type="text" 
+                name="subject"
+                placeholder="Subject" 
+                value={formData.subject}
+                onChange={handleChange}
+                required
+              />
             </div>
             <div className="home-form">
               <label className="contact-form-label">Message</label>
-              <textarea placeholder="Message" />
+              <textarea 
+                name="message"
+                placeholder="Message" 
+                value={formData.message}
+                onChange={handleChange}
+                required
+              />
             </div>
-            <button className="contact-submit-btn">Submit</button>
-          </div>
+            {submitMessage.type && (
+              <div style={{ 
+                padding: '10px', 
+                marginBottom: '10px',
+                borderRadius: '4px',
+                backgroundColor: submitMessage.type === 'success' ? '#d4edda' : '#f8d7da',
+                color: submitMessage.type === 'success' ? '#155724' : '#721c24'
+              }}>
+                {submitMessage.text}
+              </div>
+            )}
+            <button 
+              type="submit" 
+              className="contact-submit-btn"
+              disabled={isSubmitting}
+              style={{
+                opacity: isSubmitting ? 0.7 : 1,
+                cursor: isSubmitting ? 'wait' : 'pointer'
+              }}
+            >
+              {isSubmitting ? 'Sending...' : 'Submit'}
+            </button>
+          </form>
         </div>
       </section>
 

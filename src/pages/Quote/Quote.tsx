@@ -4,10 +4,78 @@ import './Quote.css';
 
 const Quote: React.FC = () => {
   const [activeStep, setActiveStep] = useState(1);
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    serviceRequired: '',
+    budget: '',
+    location: '',
+    customization: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error' | null; text: string }>({ type: null, text: '' });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
 
   const handleNext = () => {
     if (activeStep < 4) {
       setActiveStep(activeStep + 1);
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitMessage({ type: null, text: '' });
+
+    try {
+      // Use environment variable or fallback to direct PHP server URL
+      const apiUrl = import.meta.env.VITE_PHP_API_URL || 
+                     (window.location.hostname === 'localhost' ? 'http://localhost:8000/quote.php' : '/quote.php');
+      
+      console.log('Sending quote request to:', apiUrl);
+      
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      console.log('Response status:', response.status);
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error('Response error:', errorText);
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      console.log('Response data:', data);
+
+      if (data.success) {
+        setSubmitMessage({ type: 'success', text: data.message || 'Quote request sent successfully!' });
+        setFormData({ name: '', phone: '', serviceRequired: '', budget: '', location: '', customization: '' });
+        setActiveStep(1); // Reset to first step
+      } else {
+        setSubmitMessage({ type: 'error', text: data.message || 'Failed to send quote request. Please try again.' });
+      }
+    } catch (error) {
+      console.error('Error submitting quote form:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      setSubmitMessage({ 
+        type: 'error', 
+        text: `Network error: ${errorMessage}. Please ensure the PHP server is running on port 8000.` 
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -18,12 +86,26 @@ const Quote: React.FC = () => {
           <>
             <div>
               <label>Full Name</label>
-              <input type="text" placeholder="Full Name" />
+              <input 
+                type="text" 
+                name="name"
+                placeholder="Full Name" 
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
             </div>
             
             <div>
               <label>Phone No</label>
-              <input type="tel" placeholder="Phone No" />
+              <input 
+                type="tel" 
+                name="phone"
+                placeholder="Phone No" 
+                value={formData.phone}
+                onChange={handleChange}
+                required
+              />
             </div>
           </>
         );
@@ -33,12 +115,26 @@ const Quote: React.FC = () => {
           <>
             <div>
               <label>Service Required</label>
-              <input type="text" placeholder="1BHK" />
+              <input 
+                type="text" 
+                name="serviceRequired"
+                placeholder="e.g., 1BHK, 2BHK, 3BHK" 
+                value={formData.serviceRequired}
+                onChange={handleChange}
+                required
+              />
             </div>
             
             <div>
               <label>Your Budget</label>
-              <input type="text" placeholder="Phone No" />
+              <input 
+                type="text" 
+                name="budget"
+                placeholder="Your Budget" 
+                value={formData.budget}
+                onChange={handleChange}
+                required
+              />
             </div>
           </>
         );
@@ -48,7 +144,14 @@ const Quote: React.FC = () => {
           <>
             <div>
               <label>Your Location</label>
-              <input type="text" placeholder="Full Name" />
+              <input 
+                type="text" 
+                name="location"
+                placeholder="Your Location" 
+                value={formData.location}
+                onChange={handleChange}
+                required
+              />
             </div>
           </>
         );
@@ -58,7 +161,12 @@ const Quote: React.FC = () => {
           <>
             <label>Any Customization Required</label>
             <div>
-              <textarea placeholder="input"></textarea>
+              <textarea 
+                name="customization"
+                placeholder="Any customization requirements (optional)" 
+                value={formData.customization}
+                onChange={handleChange}
+              ></textarea>
             </div>
           </>
         );
@@ -99,11 +207,39 @@ const Quote: React.FC = () => {
             ))}
           </div>
           
-          <form>
+          <form onSubmit={(e) => {
+            e.preventDefault();
+            if (activeStep === 4 && !isSubmitting) {
+              handleSubmit(e);
+            }
+          }}>
             {renderFormContent()}
             
-            <button type="button" onClick={handleNext}>
-              {activeStep === 4 ? 'Submit' : 'Next'}
+            {submitMessage.type && (
+              <div style={{ 
+                padding: '10px', 
+                marginBottom: '10px',
+                borderRadius: '4px',
+                backgroundColor: submitMessage.type === 'success' ? '#d4edda' : '#f8d7da',
+                color: submitMessage.type === 'success' ? '#155724' : '#721c24'
+              }}>
+                {submitMessage.text}
+              </div>
+            )}
+            
+            <button 
+              type={activeStep === 4 ? 'submit' : 'button'} 
+              onClick={activeStep !== 4 ? (e) => {
+                e.preventDefault();
+                handleNext();
+              } : undefined}
+              disabled={isSubmitting}
+              style={{
+                opacity: isSubmitting ? 0.7 : 1,
+                cursor: isSubmitting ? 'wait' : 'pointer'
+              }}
+            >
+              {isSubmitting ? 'Sending...' : (activeStep === 4 ? 'Submit' : 'Next')}
             </button>
           </form>
         </div>
