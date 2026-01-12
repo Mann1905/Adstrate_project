@@ -433,15 +433,19 @@ const Home: React.FC = () => {
           <h2 className="contact-title">Let's Design Your Dream Home</h2>
           <p className="contact-description">Reach out to Ten View Interiors to begin your journey toward a beautifully designed space. Whether you need full home interiors, renovation support, or expert guidance from interior designers, our team is ready to assist with budget-friendly and creative solutions.</p>
           <div className="contact-info">
-            <p className="contact-phone">Phone No: <a href="tel:+911234123123" style={{ textDecoration: 'none', color: 'inherit' }}>+91 1234 123 123</a></p>
-            <p className="contact-email">Email: <a href="mailto:contact@tenviewinteriors.in" style={{ textDecoration: 'none', color: 'inherit' }}>contact@tenviewinteriors.in</a></p>
+            <p className="contact-phone">Phone No: <a href="tel:+918169360309" style={{ textDecoration: 'none', color: 'inherit' }}>+91 816 936 0309</a></p>
+            <p className="contact-email">Email: <a href="mailto:tenviewinteriors@gmail.com" style={{ textDecoration: 'none', color: 'inherit' }}>tenviewinteriors@gmail.com</a></p>
             <div className="contact-social-icons">
-              <div className="contact-social-icon" title="Instagram">
-                <img src="/assets/images/01_HomePage/Instagram.png" alt="Instagram" />
-              </div>
-              <div className="contact-social-icon" title="LinkedIn">
-                <img src="/assets/images/01_HomePage/LinkedIn.png" alt="LinkedIn" />
-              </div>
+              <a href="https://www.instagram.com/tenviewinteriors/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                <div className="contact-social-icon" title="Instagram">
+                  <img src="/assets/images/01_HomePage/Instagram.png" alt="Instagram" />
+                </div>
+              </a>
+              <a href="https://www.linkedin.com/in/ten-view-interiors/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                <div className="contact-social-icon" title="LinkedIn">
+                  <img src="/assets/images/01_HomePage/LinkedIn.png" alt="LinkedIn" />
+                </div>
+              </a>
             </div>
           </div>
         </div>

@@ -40,12 +40,6 @@ const Footer: React.FC = () => {
           <Link to="/process" style={{ textDecoration: 'none', color: 'inherit' }}>
             <p>Process</p>
           </Link>
-          <Link to="/blogs" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <p>Blogs</p>
-          </Link>
-          <Link to="/contact" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <p>FAQ</p>
-          </Link>
         </div>
 
         {/* Middle-Right Column (Links column 3) */}
@@ -60,17 +54,21 @@ const Footer: React.FC = () => {
 
         {/* Right Column (Contact Information) */}
         <div className="footer-contact">
-          <p>Phone No: <a href="tel:+911234123123" style={{ textDecoration: 'none', color: 'inherit' }}>+91 1234 123 123</a></p>
-          <p>Email: <a href="mailto:contact@tenviewinteriors.in" style={{ textDecoration: 'none', color: 'inherit' }}>contact@tenviewinteriors.in</a></p>
+          <p>Phone No: <a href="tel:+918169360309" style={{ textDecoration: 'none', color: 'inherit' }}>+91 816 936 0309</a></p>
+          <p>Email: <a href="mailto:tenviewinteriors@gmail.com" style={{ textDecoration: 'none', color: 'inherit' }}>tenviewinteriors@gmail.com</a></p>
 
           {/* Social Icons */}
           <div className="footer-social-icons">
-            <div className="footer-social-icon" title="Instagram">
-              <img src="/assets/images/01_HomePage/Instagram.png" alt="Instagram" />
-            </div>
-            <div className="footer-social-icon" title="LinkedIn">
-              <img src="/assets/images/01_HomePage/LinkedIn.png" alt="LinkedIn" />
-            </div>
+            <a href="https://www.instagram.com/tenviewinteriors/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+              <div className="footer-social-icon" title="Instagram">
+                <img src="/assets/images/01_HomePage/Instagram.png" alt="Instagram" />
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/ten-view-interiors/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+              <div className="footer-social-icon" title="LinkedIn">
+                <img src="/assets/images/01_HomePage/LinkedIn.png" alt="LinkedIn" />
+              </div>
+            </a>
           </div>
         </div>
 

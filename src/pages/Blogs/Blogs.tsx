@@ -1,40 +1,29 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useNavigate } from 'react-router-dom';
+import blogMeta from '../../data/blogmeta';
 import './Blogs.css';
 
 interface BlogPost {
-  id: number;
+  id: number | string;
   title: string;
   description: string;
   image: string;
 }
 
 const Blogs: React.FC = () => {
-  const blogPosts: BlogPost[] = [
-    {
-      id: 1,
-      title: 'Blogs Title',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      image: '/assets/images/01_HomePage/HeroSection_01.jpg'
-    },
-    {
-      id: 2,
-      title: 'Blogs Title',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      image: '/assets/images/01_HomePage/HeroSection_01.jpg'
-    },
-    {
-      id: 3,
-      title: 'Blogs Title',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      image: '/assets/images/01_HomePage/HeroSection_01.jpg'
-    },
-    {
-      id: 4,
-      title: 'Blogs Title',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      image: '/assets/images/01_HomePage/HeroSection_01.jpg'
-    },
+  const navigate = useNavigate();
+
+  
+  const integratedBlogs: BlogPost[] = blogMeta.map(blog => ({
+    id: blog.id,
+    title: blog.title,
+    description: blog.description,
+    image: blog.image,
+  }));
+
+  
+  const remainingBlogs: BlogPost[] = [
     {
       id: 5,
       title: 'Blogs Title',
@@ -67,6 +56,9 @@ const Blogs: React.FC = () => {
     }
   ];
 
+  // Combine: first 4 from reference data, remaining 5 unchanged
+  const allBlogs = [...integratedBlogs, ...remainingBlogs];
+
   return (
     <div className="blogs-container">
       <Helmet>
@@ -93,8 +85,17 @@ const Blogs: React.FC = () => {
       <section>
         <h2 className="blogs-section-title">Blogs</h2>
         <div className="blogs-grid">
-          {blogPosts.map((post) => (
-            <article key={post.id} className="blog-card">
+          {allBlogs.map((post) => (
+            <article 
+              key={post.id} 
+              className="blog-card" 
+              onClick={() => {
+                // Only navigate for integrated blogs (blog-1, blog-2, etc.)
+                if (typeof post.id === 'string' && post.id.startsWith('blog-')) {
+                  navigate(`/blog/${post.id}`);
+                }
+              }}
+            >
               <h3 className="blog-card-title">{post.title}</h3>
               <p className="blog-card-description">{post.description}</p>
               <img 

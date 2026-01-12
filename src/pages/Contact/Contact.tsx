@@ -92,16 +92,20 @@ const Contact: React.FC = () => {
             feel personal, functional, and beautifully aligned
             with modern living.</p> {/* Contact description */}
           <div className="contact-details-container"> {/* Contact details container */}
-            <p>Phone No: <a href="tel:+911234123123" style={{ textDecoration: 'none', color: 'inherit' }}>+91 1234 123 123</a></p> {/* Phone number */}
-            <p>Email: <a href="mailto:contact@tenviewinteriors.in" style={{ textDecoration: 'none', color: 'inherit' }}>contact@tenviewinteriors.in</a></p> {/* Email address */}
+            <p>Phone No: <a href="tel:+918169360309" style={{ textDecoration: 'none', color: 'inherit' }}>+91 816 936 0309</a></p> {/* Phone number */}
+            <p>Email: <a href="mailto:tenviewinteriors@gmail.com" style={{ textDecoration: 'none', color: 'inherit' }}>tenviewinteriors@gmail.com</a></p> {/* Email address */}
             {/* Social Icons */}
             <div className="contact-social-icons">
-              <div className="contact-social-icon" title="Instagram">
-                <img src="/assets/images/01_HomePage/Instagram.png" alt="Instagram" />
-              </div> {/* Instagram icon */}
-              <div className="contact-social-icon" title="LinkedIn">
-                <img src="/assets/images/01_HomePage/LinkedIn.png" alt="LinkedIn" />
-              </div> {/* LinkedIn icon */}
+              <a href="https://www.instagram.com/tenviewinteriors/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                <div className="contact-social-icon" title="Instagram">
+                  <img src="/assets/images/01_HomePage/Instagram.png" alt="Instagram" />
+                </div> {/* Instagram icon */}
+              </a>
+              <a href="https://www.linkedin.com/in/ten-view-interiors/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                <div className="contact-social-icon" title="LinkedIn">
+                  <img src="/assets/images/01_HomePage/LinkedIn.png" alt="LinkedIn" />
+                </div> {/* LinkedIn icon */}
+              </a>
             </div>
           </div>
 

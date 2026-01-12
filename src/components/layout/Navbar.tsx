@@ -33,9 +33,6 @@ const Navbar: React.FC = () => {
         <Link to="/process">
           <button>Process</button>
         </Link>
-        <Link to="/blogs">
-          <button>Blogs</button>
-        </Link>
       </div>
       <div className="navbar-actions">
         <Link to="/contact">
@@ -63,9 +60,6 @@ const Navbar: React.FC = () => {
           </Link>
           <Link to="/process" onClick={closeMenu}>
             <p>Process</p>
-          </Link>
-          <Link to="/blogs" onClick={closeMenu}>
-            <p>Blogs</p>
           </Link>
           <Link to="/contact" onClick={closeMenu}>
             <p>Consultation</p>
