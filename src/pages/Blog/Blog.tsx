@@ -49,7 +49,7 @@ const Blog: React.FC = () => {
 
       <div className="content">
         <div className="icons">
-          <a href="https://www.instagram.com/tenviewinteriors/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+          <a href="https://www.instagram.com/tenview.interiors/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
             <img src="/assets/images/01_HomePage/Instagram.png" alt="Instagram" />
           </a>
           <a href="https://www.linkedin.com/in/ten-view-interiors/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>

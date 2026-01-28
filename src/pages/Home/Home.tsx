@@ -273,7 +273,7 @@ const Home: React.FC = () => {
       <section className="why-choose-section">
         <div className="why-choose-image-container">
           <img 
-            src="public\assets\images\01_HomePage\image 8.jpg" 
+            src="/assets/images/01_HomePage/image 8.jpg" 
             alt="Interior Design Process" 
             className="why-choose-image"
           />
@@ -436,7 +436,7 @@ const Home: React.FC = () => {
             <p className="contact-phone">Phone No: <a href="tel:+918169360309" style={{ textDecoration: 'none', color: 'inherit' }}>+91 816 936 0309</a></p>
             <p className="contact-email">Email: <a href="mailto:tenviewinteriors@gmail.com" style={{ textDecoration: 'none', color: 'inherit' }}>tenviewinteriors@gmail.com</a></p>
             <div className="contact-social-icons">
-              <a href="https://www.instagram.com/tenviewinteriors/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+              <a href="https://www.instagram.com/tenview.interiors/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
                 <div className="contact-social-icon" title="Instagram">
                   <img src="/assets/images/01_HomePage/Instagram.png" alt="Instagram" />
                 </div>

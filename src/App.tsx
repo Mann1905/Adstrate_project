@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
+import ScrollToTop from './components/common/ScrollToTop/ScrollToTop';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
@@ -25,6 +26,7 @@ const App: React.FC = () => {
   return (
     <HelmetProvider>
       <Router>
+        <ScrollToTop />
         <div style={{ 
           display: 'flex', 
           flexDirection: 'column', 

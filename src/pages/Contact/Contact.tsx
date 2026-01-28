@@ -96,7 +96,7 @@ const Contact: React.FC = () => {
             <p>Email: <a href="mailto:tenviewinteriors@gmail.com" style={{ textDecoration: 'none', color: 'inherit' }}>tenviewinteriors@gmail.com</a></p> {/* Email address */}
             {/* Social Icons */}
             <div className="contact-social-icons">
-              <a href="https://www.instagram.com/tenviewinteriors/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+              <a href="https://www.instagram.com/tenview.interiors/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
                 <div className="contact-social-icon" title="Instagram">
                   <img src="/assets/images/01_HomePage/Instagram.png" alt="Instagram" />
                 </div> {/* Instagram icon */}

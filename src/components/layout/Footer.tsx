@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
 
           {/* Social Icons */}
           <div className="footer-social-icons">
-            <a href="https://www.instagram.com/tenviewinteriors/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+            <a href="https://www.instagram.com/tenview.interiors/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
               <div className="footer-social-icon" title="Instagram">
                 <img src="/assets/images/01_HomePage/Instagram.png" alt="Instagram" />
               </div>

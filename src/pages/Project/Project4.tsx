@@ -99,7 +99,8 @@ const Project4: React.FC = () => {
                 />
                 <img
                     className="project-bottom-image-small"
-                    src="/assets/images/05_OurProjectDetailsPage/project4/IMG-20250814-WA0023.jpeg"
+                    src="/assets/images/05_OurProjectDetailsPage/project4/IMG-20250814-WA0023.jpg"
+                    
                     alt="Decorative mandir and display shelves detail in hall design"
                 />
             </div>
