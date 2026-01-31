@@ -78,6 +78,11 @@
   border-bottom: 0.2vw solid #02000092;
 }
 
+.nav-item-empty {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
 .nav-item h3 {
   font-size: 1.67vw;
   font-weight: 500;

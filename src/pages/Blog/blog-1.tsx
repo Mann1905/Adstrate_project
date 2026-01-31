@@ -14,15 +14,15 @@ const Blog1: React.FC = () => {
   return (
     <div className="container">
       <Helmet>
-        <title>Top 10 Physical Therapies to Speed Up Injury Recovery</title>
-        <meta name="description" content="Discover the top 10 physical therapies that speed up injury recovery, reduce pain, and restore mobility fast. Expert tips from ARC Medical Rehab." />
-        <meta name="keywords" content="interior design blog post, design tips, home inspiration, design insights" />
-        <meta property="og:title" content="Top 10 Physical Therapies to Speed Up Injury Recovery" />
-        <meta property="og:description" content="Discover the top 10 physical therapies that speed up injury recovery, reduce pain, and restore mobility fast. Expert tips from ARC Medical Rehab." />
+        <title>Transforming Your Home with Timeless Interior Design</title>
+        <meta name="description" content="Creating a home that feels stylish, comfortable, and enduring is the goal of timeless interior design. Learn about key elements and how we help create timeless spaces." />
+        <meta name="keywords" content="interior design blog post, design tips, home inspiration, design insights, timeless design" />
+        <meta property="og:title" content="Transforming Your Home with Timeless Interior Design" />
+        <meta property="og:description" content="Creating a home that feels stylish, comfortable, and enduring is the goal of timeless interior design. Learn about key elements and how we help create timeless spaces." />
         <meta property="og:type" content="article" />
       </Helmet>
 
-      <img className="hero" src={blog?.image || '/assets/images/01_HomePage/HeroSection_01.jpg'} alt="Top 10 Physical Therapies to Speed Up Injury Recovery" />
+      <img className="hero" src={blog?.image || '/assets/images/01_HomePage/HeroSection_01.jpg'} alt="Transforming Your Home with Timeless Interior Design" />
 
       <div className="content">
         <div className="icons">
@@ -35,37 +35,32 @@ const Blog1: React.FC = () => {
         </div>
 
         <div className="text">
-          <h1>Top 10 Physical Therapies to Speed Up Injury Recovery</h1>
-          <p>Recovering from an injury can feel frustrating—especially when pain, stiffness, or weakness hold you back from your regular routine. The good news? Modern physical therapies have evolved dramatically, offering faster and more effective recovery options than ever before. Whether you're dealing with a sports injury, post-surgical healing, or chronic pain, the right therapy can shorten downtime and restore strength safely.</p>
-          <p>In this expert guide, we break down the top 10 physical therapies that speed up injury recovery, when to use them, and how they work—all backed by real-world clinical results from rehabilitation specialists.</p>
+          <h1>Transforming Your Home with Timeless Interior Design</h1>
+          <p>Creating a home that feels stylish, comfortable, and enduring is the goal of timeless interior design. Trends come and go, but a well-designed space grounded in classic principles will always feel fresh and inviting.</p>
 
-          <p><strong>⭐ Quick Featured Snippet Answer</strong><br />
-          The best physical therapies for speeding up injury recovery include manual therapy, therapeutic exercise, cryotherapy, heat therapy, electrical stimulation, ultrasound therapy, dry needling, aquatic therapy, kinesio taping, and shockwave therapy. These methods reduce pain, increase mobility, and accelerate tissue healing.</p>
+          <h2>What Is Timeless Interior Design?</h2>
+          <p>Timeless design focuses on balance, proportion, and quality. Instead of chasing every new trend, it blends neutral color palettes, natural materials, and thoughtful details that age beautifully. Think warm woods, stone textures, elegant lighting, and furniture with clean, classic lines.</p>
 
-         
-          
+          <h2>Key Elements of a Timeless Home</h2>
+          <p><strong>Neutral foundations:</strong> Whites, creams, beiges, and soft greys create a calm base that can evolve over time.</p>
+          <p><strong>Quality over quantity:</strong> Investing in well-made furniture and finishes ensures longevity and comfort.</p>
+          <p><strong>Layered textures:</strong> Linen, wool, leather, and wood add depth without overwhelming the space.</p>
+          <p><strong>Thoughtful accents:</strong> Art, books, and personal objects bring character and individuality.</p>
 
-         
-
-         
+          <h2>How We Help Create Timeless Spaces</h2>
+          <p>Our interior design process begins with understanding how you live in your space. We design interiors that reflect your personality while maintaining a refined, lasting aesthetic. The result is a home that feels elegant today and for years to come.</p>
         </div>
       </div>
 
       <div className="navigation">
-        <div className="nav-item">
+        <div className={`nav-item ${!previousBlog ? 'nav-item-empty' : ''}`}>
           {previousBlog ? (
             <>
               <h3>{previousBlog.title}</h3>
               <p>{previousBlog.description}</p>
               <button onClick={() => navigate(`/blog/${previousBlog.id}`)}>Previous</button>
             </>
-          ) : (
-            <>
-              <h3>Blogs Title</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <button>Previous</button>
-            </>
-          )}
+          ) : null}
         </div>
 
         <div className="nav-item">

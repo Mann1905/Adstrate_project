@@ -3,15 +3,23 @@ import { Helmet } from 'react-helmet-async';
 import { useParams, useNavigate } from 'react-router-dom';
 import blogMeta from '../../data/blogmeta';
 import Blog1 from './blog-1';
+import Blog2 from './blog-2';
+import Blog3 from './blog-3';
 import './Blog.css';
 
 const Blog: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   
-  // If it's blog-1, use the dedicated Blog1 component with full content
+  // Use dedicated blog components with full content
   if (id === 'blog-1') {
     return <Blog1 />;
+  }
+  if (id === 'blog-2') {
+    return <Blog2 />;
+  }
+  if (id === 'blog-3') {
+    return <Blog3 />;
   }
   
   const blog = blogMeta.find(b => b.id === id);

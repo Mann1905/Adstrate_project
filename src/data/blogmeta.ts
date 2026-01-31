@@ -11,20 +11,20 @@ const blogMeta: BlogMeta[] = [
   {
     image: '/assets/images/Blog/meta/1.jpg',
     id: 'blog-1',
-    title: 'Top 10 Physical Therapies to Speed Up Injury Recovery',
-    description: 'Discover the top 10 physical therapies that speed up injury recovery, reduce pain, and restore mobility fast. Expert tips from ARC Medical Rehab.',
+    title: 'Transforming Your Home with Timeless Interior Design',
+    description: 'Creating a home that feels stylish, comfortable, and enduring is the goal of timeless interior design. Learn about key elements and how we help create timeless spaces.',
   },
   {
     image: '/assets/images/Blog/meta/2.jpg',
     id: 'blog-2',
-    title: 'The Complete Physical Rehabilitation Journey Explained',
-    description: 'Discover the full physical rehabilitation journey—from injury to full recovery. Expert guidance to heal faster and regain strength at ARC Medical Rehab.',
+    title: 'The Power of Color in Interior Design',
+    description: 'Color is one of the most powerful tools in interior design. Learn how color affects mood, creates cohesive palettes, and transforms your home.',
   },  
   {
     image: '/assets/images/Blog/meta/3.jpg',
     id: 'blog-3',
-    title: 'Beginner\'s Guide to Physical Rehab for All Ages',
-    description: 'Start your recovery journey with this beginner-friendly guide to physical rehab for all ages. Learn benefits, stages, and expert tips from ARC Medical Rehab.',
+    title: 'Why Hiring an Interior Designer Is a Smart Investment',
+    description: 'Hiring an interior designer is not just about aesthetics—its about making smart decisions that save time, money, and stress. Learn what an interior designer brings to your project.',
   },  
   {
     image: '/assets/images/Blog/meta/4.jpg',
