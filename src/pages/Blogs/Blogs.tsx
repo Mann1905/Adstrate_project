@@ -85,7 +85,8 @@ const Blogs: React.FC = () => {
       <section>
         <h2 className="blogs-section-title">Blogs</h2>
         <div className="blogs-grid">
-          {allBlogs.map((post) => (
+          {/* Only showing the first blog card, other 8 are commented out */}
+          {allBlogs.slice(0, 1).map((post) => (
             <article 
               key={post.id} 
               className="blog-card" 
@@ -105,6 +106,28 @@ const Blogs: React.FC = () => {
               />
             </article>
           ))}
+          {/* Commented out: Other 8 blog cards
+          {allBlogs.slice(1).map((post) => (
+            <article 
+              key={post.id} 
+              className="blog-card" 
+              onClick={() => {
+                // Only navigate for integrated blogs (blog-1, blog-2, etc.)
+                if (typeof post.id === 'string' && post.id.startsWith('blog-')) {
+                  navigate(`/blog/${post.id}`);
+                }
+              }}
+            >
+              <h3 className="blog-card-title">{post.title}</h3>
+              <p className="blog-card-description">{post.description}</p>
+              <img 
+                className="blog-card-image" 
+                src={post.image} 
+                alt={post.title}
+              />
+            </article>
+          ))}
+          */}
         </div>
       </section>
     </div>
