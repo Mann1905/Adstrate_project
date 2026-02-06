@@ -11,8 +11,8 @@ const blogMeta: BlogMeta[] = [
   {
     image: '/assets/images/Blog/meta/1.jpg',
     id: 'blog-1',
-    title: 'Transforming Your Home with Timeless Interior Design',
-    description: 'Creating a home that feels stylish, comfortable, and enduring is the goal of timeless interior design. Learn about key elements and how we help create timeless spaces.',
+    title: 'Internet Safety for Students: Why It Matters More Than Ever',
+    description: 'Learn why internet safety for students is more important than ever. Explore risks, prevention tips, and expert guidance for parents and schools.',
   },
   {
     image: '/assets/images/Blog/meta/2.jpg',
