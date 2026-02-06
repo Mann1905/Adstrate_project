@@ -9,7 +9,7 @@ export interface BlogMeta {
 // If images are imported (like in reference files), change to import statements
 const blogMeta: BlogMeta[] = [
   {
-    image: '/assets/images/Blog/meta/1.jpg',
+    image: '/assets/images/09_BlogsDashboard/Frame 8.png',
     id: 'blog-1',
     title: 'Internet Safety for Students: Why It Matters More Than Ever',
     description: 'Learn why internet safety for students is more important than ever. Explore risks, prevention tips, and expert guidance for parents and schools.',
