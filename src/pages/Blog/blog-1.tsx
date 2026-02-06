@@ -22,7 +22,7 @@ const Blog1: React.FC = () => {
         <meta property="og:type" content="article" />
       </Helmet>
 
-      <img className="hero" src={blog?.image || '/assets/images/01_HomePage/HeroSection_01.jpg'} alt="Internet Safety for Students: Why It Matters More Than Ever" />
+      <img className="hero" src="/assets/images/09_BlogsDashboard/Frame 8.png" alt="Internet Safety for Students: Why It Matters More Than Ever" />
 
       <div className="content">
         <div className="icons">
@@ -226,7 +226,7 @@ const Blog1: React.FC = () => {
             </>
           )}
         </div>
-      </div> */}
+      </div> */}  
     </div>
   );
 };
